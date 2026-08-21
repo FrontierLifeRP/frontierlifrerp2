@@ -90,3 +90,66 @@ const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("revealed"); });
 },{threshold:.12});
 $$(".section,.file-card,.archive-card,.lore-card").forEach(el=>observer.observe(el));
+
+const regExtra = {
+  faq: {
+    title: "NAJWAŻNIEJSZE ZASADY",
+    html: `
+      <h4>01 · ZANIM WEJDZIESZ NA SERWER</h4>
+      <p>Zapoznaj się z pełnym regulaminem, zasadami RolePlay oraz zasadami społeczności. Graj tak, aby rozwijać historię — nie tylko wygrywać sytuacje.</p>
+      <ul>
+        <li>Szanuj innych graczy i ich rozgrywkę.</li>
+        <li>Oddzielaj wiedzę gracza od wiedzy postaci.</li>
+        <li>Nie wymuszaj nierealnych zachowań na innych.</li>
+        <li>Dbaj o ciągłość i sens swojej postaci.</li>
+      </ul>
+      <h4>02 · ZASADA ZDROWEGO ROZSĄDKU</h4>
+      <p>Jeżeli sytuacja nie została opisana w regulaminie, kieruj się logiką świata, realizmem epoki i dobrem wspólnej rozgrywki.</p>
+    `
+  },
+  rp: {
+    title: "STANDARD ROLEPLAY",
+    html: `
+      <h4>METAGAMING</h4>
+      <p>Nie wykorzystuj informacji zdobytych poza grą, jeśli Twoja postać nie mogła ich zdobyć w świecie gry.</p>
+      <h4>POWERGAMING</h4>
+      <p>Nie wymuszaj na innych graczach rezultatu interakcji i nie podejmuj działań, których postać nie mogłaby wiarygodnie wykonać.</p>
+      <h4>RDM / VDM</h4>
+      <p>Atakowanie lub zabijanie bez odpowiedniej podstawy fabularnej oraz wykorzystywanie pojazdu jako broni powinno mieć uzasadnienie zgodne z zasadami serwera.</p>
+      <h4>CHARACTER FIRST</h4>
+      <p>Twoja postać powinna mieć charakter, cele, słabości i konsekwencje swoich decyzji. Historia jest ważniejsza niż wynik pojedynczej sceny.</p>
+    `
+  },
+  punishments: {
+    title: "KARY I ODPOWIEDZIALNOŚĆ",
+    html: `
+      <h4>DLACZEGO STOSUJEMY KARY?</h4>
+      <p>System kar ma chronić jakość rozgrywki i pomagać utrzymać spójne środowisko dla całej społeczności.</p>
+      <ul>
+        <li>Upomnienie / ostrzeżenie — przy drobnych naruszeniach.</li>
+        <li>Kara czasowa — przy poważniejszych lub powtarzających się naruszeniach.</li>
+        <li>Ban — przy ciężkich naruszeniach regulaminu lub działaniu na szkodę serwera.</li>
+      </ul>
+      <p>Ostateczna kwalifikacja zależy od okoliczności, historii gracza oraz decyzji administracji zgodnie z pełnym regulaminem.</p>
+    `
+  },
+  appeal: {
+    title: "ODWOŁANIA I ZGŁOSZENIA",
+    html: `
+      <h4>ODWOŁANIE OD KARY</h4>
+      <p>Przygotuj numer kary, opis sytuacji oraz materiały, które mogą pomóc administracji odtworzyć przebieg zdarzenia.</p>
+      <h4>ZGŁOSZENIE GRACZA</h4>
+      <p>Opisz sytuację rzeczowo. Podaj czas, miejsce, nicki oraz — jeżeli jest to możliwe — dowody.</p>
+      <h4>WAŻNE</h4>
+      <p>Nie publikuj prywatnych danych innych osób. Sprawy administracyjne prowadź w wyznaczonych kanałach społeczności.</p>
+    `
+  }
+};
+
+$$("[data-reg-extra]").forEach(btn => btn.addEventListener("click", () => {
+  const data = regExtra[btn.dataset.regExtra];
+  if (!data) return;
+  $("#regExtraTitle").textContent = data.title;
+  $("#regExtraText").innerHTML = data.html;
+  openModal("regExtraModal");
+}));
