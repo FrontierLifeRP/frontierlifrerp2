@@ -177,16 +177,40 @@ const mapArchive = {
   rdr2: {
     kicker: "THE FRONTIER ATLAS · 1899",
     title: "RED DEAD REDEMPTION II",
-    src: "https://i.pinimg.com/originals/e3/49/aa/e349aa805d9ac0db08a54ad624ed3b40.jpg",
+    src: "rdr2-map.jpg",
     alt: "Mapa świata Red Dead Redemption 2"
   },
   guarma: {
     kicker: "SPECIAL TERRITORY",
     title: "GUARMA",
-    src: "https://i.imgur.com/63f6xbr.jpg",
+    src: "https://www.gtabase.com/igallery/maps/red-dead-redemption-2-map-guarma-1920.jpg",
     alt: "Mapa Guarmy z Red Dead Redemption 2"
   }
 };
+
+
+// Map image fallback: the main RDR2 map is local. Guarma uses a stable
+// source with a second fallback if the first host blocks hotlinking.
+const mapFallbacks = {
+  guarma: [
+    "https://www.gtabase.com/igallery/maps/red-dead-redemption-2-map-guarma-1920.jpg",
+    "https://i.imgur.com/63f6xbr.jpg"
+  ]
+};
+
+$$('[data-map-open] .map-image-wrap img').forEach(img => {
+  img.addEventListener('error', () => {
+    const card = img.closest('[data-map-open]');
+    const key = card && card.dataset.mapOpen;
+    if (!key || !mapFallbacks[key]) return;
+    const current = img.dataset.fallbackIndex ? Number(img.dataset.fallbackIndex) : 0;
+    const next = current + 1;
+    if (next < mapFallbacks[key].length) {
+      img.dataset.fallbackIndex = String(next);
+      img.src = mapFallbacks[key][next];
+    }
+  });
+});
 
 $$("[data-map-open]").forEach(card => card.addEventListener("click", () => {
   const data = mapArchive[card.dataset.mapOpen];
