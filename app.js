@@ -166,3 +166,54 @@ if (rulesModalEl) {
     }
   }, {passive:false});
 }
+
+// RDR2 / Guarma map archive lightbox.
+const mapLightbox = $("#mapLightbox");
+const mapLightboxImage = $("#mapLightboxImage");
+const mapLightboxTitle = $("#mapLightboxTitle");
+const mapLightboxKicker = $("#mapLightboxKicker");
+
+const mapArchive = {
+  rdr2: {
+    kicker: "THE FRONTIER ATLAS · 1899",
+    title: "RED DEAD REDEMPTION II",
+    src: "https://i.pinimg.com/originals/e3/49/aa/e349aa805d9ac0db08a54ad624ed3b40.jpg",
+    alt: "Mapa świata Red Dead Redemption 2"
+  },
+  guarma: {
+    kicker: "SPECIAL TERRITORY",
+    title: "GUARMA",
+    src: "https://i.imgur.com/63f6xbr.jpg",
+    alt: "Mapa Guarmy z Red Dead Redemption 2"
+  }
+};
+
+$$("[data-map-open]").forEach(card => card.addEventListener("click", () => {
+  const data = mapArchive[card.dataset.mapOpen];
+  if (!data || !mapLightbox) return;
+  mapLightboxKicker.textContent = data.kicker;
+  mapLightboxTitle.textContent = data.title;
+  mapLightboxImage.src = data.src;
+  mapLightboxImage.alt = data.alt;
+  mapLightbox.classList.add("open");
+  mapLightbox.setAttribute("aria-hidden","false");
+  document.body.classList.add("modal-open");
+}));
+
+const closeMapLightbox = () => {
+  if (!mapLightbox) return;
+  mapLightbox.classList.remove("open");
+  mapLightbox.setAttribute("aria-hidden","true");
+  mapLightboxImage.src = "";
+  document.body.classList.remove("modal-open");
+};
+
+$$("[data-map-close]").forEach(btn => btn.addEventListener("click", closeMapLightbox));
+if (mapLightbox) {
+  mapLightbox.addEventListener("click", e => {
+    if (e.target === mapLightbox) closeMapLightbox();
+  });
+}
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeMapLightbox();
+});

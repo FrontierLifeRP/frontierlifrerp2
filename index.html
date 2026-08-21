@@ -122,6 +122,75 @@
         <h2>Mapa pogranicza</h2>
         <p>Otwórz akta miasta i poznaj jego charakter.</p>
       </div>
+
+      <div class="map-atlas">
+        <div class="atlas-main map-paper-card" data-map-open="rdr2">
+          <div class="map-paper-head">
+            <div>
+              <span>THE FRONTIER ATLAS · 1899</span>
+              <h3>RED DEAD REDEMPTION II</h3>
+            </div>
+            <b>OTWÓRZ MAPĘ ↗</b>
+          </div>
+          <div class="map-image-wrap">
+            <img
+              src="https://i.pinimg.com/originals/e3/49/aa/e349aa805d9ac0db08a54ad624ed3b40.jpg"
+              alt="Mapa świata Red Dead Redemption 2"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            >
+            <div class="map-compass">N<br><span>✦</span><br>S</div>
+          </div>
+          <div class="map-paper-foot">
+            <span>AMBARINO · NEW HANOVER · LEMOYNE · WEST ELIZABETH · NEW AUSTIN</span>
+            <span>MAP ARCHIVE / RDR2</span>
+          </div>
+        </div>
+
+        <div class="atlas-side">
+          <div class="map-paper-card guarma-card" data-map-open="guarma">
+            <div class="map-paper-head">
+              <div>
+                <span>SPECIAL TERRITORY</span>
+                <h3>GUARMA</h3>
+              </div>
+              <b>OTWÓRZ ↗</b>
+            </div>
+            <div class="map-image-wrap">
+              <img
+                src="https://i.imgur.com/63f6xbr.jpg"
+                alt="Mapa wyspy Guarma z Red Dead Redemption 2"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              >
+            </div>
+            <div class="guarma-note">
+              <span>ISLAND ARCHIVE</span>
+              <p>Oddzielna karta dla tropikalnej wyspy i jej terenów.</p>
+            </div>
+          </div>
+
+          <div class="atlas-note">
+            <span>FRONTIER LIFE · CARTOGRAPHY OFFICE</span>
+            <strong>MAPY ŚWIATA</strong>
+            <p>Najważniejsze terytoria świata Red Dead Redemption II oraz Guarma w jednym archiwum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-lightbox" id="mapLightbox" aria-hidden="true">
+        <button class="map-lightbox-close" data-map-close aria-label="Zamknij">×</button>
+        <div class="map-lightbox-paper">
+          <span class="map-lightbox-kicker" id="mapLightboxKicker">FRONTIER ATLAS</span>
+          <h3 id="mapLightboxTitle">RED DEAD REDEMPTION II</h3>
+          <img id="mapLightboxImage" src="" alt="">
+          <div class="map-lightbox-credit">
+            <span>FRONTIERLIFE · SEASON II</span>
+            <span>MAP ARCHIVE</span>
+          </div>
+        </div>
+      </div>
+
       <div class="map-board">
         <div class="map-grid"></div>
         <div class="river river-a"></div><div class="river river-b"></div>
