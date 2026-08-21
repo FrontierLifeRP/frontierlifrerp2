@@ -845,9 +845,9 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
 
 .map-pin.p7{left:75.9%;top:53.8%}
 
-.map-pin.p8{left:84.8%;top:17.8%}
+.map-pin.p8{left:89.0%;top:29.5%}
 
-.map-pin.p9{left:91.0%;top:40.5%}
+.map-pin.p9{left:82.2%;top:27.8%}
 
 .map-pin.p10{left:65.8%;top:16.8%}
 
@@ -1183,3 +1183,33 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
 .map-board .map-coordinates,
 .map-board .map-lore-badge,
 .map-board .map-instruction{display:none !important}
+
+/* ===== MAP MARKER TOOLTIP FIX ===== */
+.map-board .map-pin{
+  overflow:visible !important;
+}
+.map-board .map-pin:after{
+  z-index:100 !important;
+  display:block !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  background:#24180f !important;
+  border:1px solid #a37c42 !important;
+  color:#f0d6a0 !important;
+  box-shadow:0 5px 14px rgba(0,0,0,.55) !important;
+  text-shadow:none !important;
+  font-family:var(--display, "Roboto Slab", serif) !important;
+  font-weight:700 !important;
+  letter-spacing:1px !important;
+  line-height:1.2 !important;
+  white-space:nowrap !important;
+  pointer-events:none !important;
+  mix-blend-mode:normal !important;
+}
+.map-board .map-pin:hover:after,
+.map-board .map-pin:focus-visible:after{
+  visibility:visible !important;
+  opacity:1 !important;
+  background:#24180f !important;
+  transform:translate(-50%,-4px) !important;
+}
