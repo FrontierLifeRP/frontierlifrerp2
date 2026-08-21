@@ -462,3 +462,144 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
   }
   .rule-page-no{margin-left:-30px !important;margin-right:-30px !important}
 }
+
+/* =========================================================
+   FINAL REGULATION SCROLL FIX
+   The document viewport is the scrollable area; the bottom
+   controls remain fixed inside the book.
+   ========================================================= */
+
+.book-pages{
+  min-height:0 !important;
+  height:100% !important;
+  display:grid !important;
+  grid-template-rows:minmax(0,1fr) 55px !important;
+  overflow:hidden !important;
+}
+
+.rule-page{
+  min-height:0 !important;
+  height:auto !important;
+  max-height:none !important;
+  box-sizing:border-box !important;
+  overflow-y:scroll !important;
+  overflow-x:hidden !important;
+  scrollbar-width:auto !important;
+  scrollbar-color:#76522f #b99b68 !important;
+  padding:65px 9% 30px !important;
+}
+
+.rule-page.active{
+  display:block !important;
+}
+
+/* Make the scrollbar impossible to miss in Chrome/Edge. */
+.rule-page::-webkit-scrollbar{
+  width:16px !important;
+  display:block !important;
+}
+.rule-page::-webkit-scrollbar-track{
+  background:#b99b68 !important;
+  border-left:1px solid #86643d !important;
+}
+.rule-page::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#9a7348,#604225) !important;
+  border:3px solid #b99b68 !important;
+  border-radius:10px !important;
+  min-height:80px !important;
+}
+.rule-page::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#b58a58,#704b2b) !important;
+}
+
+/* The seal is part of the document flow, so it sits after ALL
+   text on the page and moves with the paper while scrolling. */
+.rule-page .document-wax,
+.rule-page .document-wax.rule-wax{
+  position:relative !important;
+  display:block !important;
+  float:none !important;
+  width:62px !important;
+  height:62px !important;
+  min-width:62px !important;
+  min-height:62px !important;
+  max-width:62px !important;
+  max-height:62px !important;
+  margin:42px auto 12px !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  opacity:.78 !important;
+  object-fit:contain !important;
+  pointer-events:none !important;
+}
+
+.rule-page-no{
+  position:relative !important;
+  display:block !important;
+  left:auto !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:8px 0 6px !important;
+  text-align:center !important;
+}
+
+/* Real wax seal in the main navigation — no fake FL circle. */
+.brand-seal{
+  width:44px !important;
+  height:44px !important;
+  min-width:44px !important;
+  flex:0 0 44px !important;
+  display:grid !important;
+  place-items:center !important;
+  overflow:visible !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.5)) !important;
+}
+.brand-seal img{
+  display:block !important;
+  width:44px !important;
+  height:44px !important;
+  min-width:44px !important;
+  min-height:44px !important;
+  max-width:44px !important;
+  max-height:44px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:800px){
+  .book-pages{
+    grid-template-rows:minmax(0,1fr) 55px !important;
+    min-height:0 !important;
+  }
+  .rule-page{
+    padding:45px 24px 28px !important;
+  }
+  .rule-page .document-wax,
+  .rule-page .document-wax.rule-wax{
+    width:54px !important;
+    height:54px !important;
+    min-width:54px !important;
+    min-height:54px !important;
+    max-width:54px !important;
+    max-height:54px !important;
+    margin-top:32px !important;
+  }
+  .brand-seal,
+  .brand-seal img{
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+    min-height:36px !important;
+    max-width:36px !important;
+    max-height:36px !important;
+  }
+}

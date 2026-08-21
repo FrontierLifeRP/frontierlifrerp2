@@ -153,3 +153,16 @@ $$("[data-reg-extra]").forEach(btn => btn.addEventListener("click", () => {
   $("#regExtraText").innerHTML = data.html;
   openModal("regExtraModal");
 }));
+
+// Regulation scrolling fallback: always route wheel input to the active paper.
+const rulesModalEl = $("#rulesModal");
+if (rulesModalEl) {
+  rulesModalEl.addEventListener("wheel", (e) => {
+    const page = $(".rule-page.active", rulesModalEl);
+    if (!page) return;
+    if (page.scrollHeight > page.clientHeight) {
+      page.scrollTop += e.deltaY;
+      e.preventDefault();
+    }
+  }, {passive:false});
+}
