@@ -52,11 +52,7 @@ $("[data-next]").addEventListener("click",()=>showRule(currentRule+1));
 showRule(0);
 
 const cityFiles = $$(".city-file");
-function showCity(i){
-  cityFiles.forEach((f,idx)=>f.classList.toggle("active",idx===Number(i)));
-  openModal("cityModal");
-}
-$$(".lore-card,.map-pin").forEach(el=>el.addEventListener("click",()=>showCity(el.dataset.city)));
+function showCity(i){ renderCityLore(i); }
 
 const fileTexts = {
   "Sheriff Office":"Akta Sheriff Office. Stróże prawa odpowiadają za utrzymanie porządku, prowadzenie śledztw i ochronę mieszkańców Frontier State.",
@@ -167,77 +163,105 @@ if (rulesModalEl) {
   }, {passive:false});
 }
 
-// RDR2 / Guarma map archive lightbox.
-const mapLightbox = $("#mapLightbox");
-const mapLightboxImage = $("#mapLightboxImage");
-const mapLightboxTitle = $("#mapLightboxTitle");
-const mapLightboxKicker = $("#mapLightboxKicker");
 
-const mapArchive = {
-  rdr2: {
-    kicker: "THE FRONTIER ATLAS · 1899",
-    title: "RED DEAD REDEMPTION II",
-    src: "rdr2-map.jpg",
-    alt: "Mapa świata Red Dead Redemption 2"
-  },
-  guarma: {
-    kicker: "SPECIAL TERRITORY",
-    title: "GUARMA",
-    src: "https://www.gtabase.com/igallery/maps/red-dead-redemption-2-map-guarma-1920.jpg",
-    alt: "Mapa Guarmy z Red Dead Redemption 2"
-  }
-};
+// ===== FRONTIER CHRONICLE YEAR ARCHIVE =====
+// 1900 contains the existing published lore. Years 1901–1905 are deliberately
+// separate archive slots so their lore can be filled independently later.
+const loreYears = [1900,1901,1902,1903,1904,1905];
+let selectedLoreYear = 1900;
 
+const yearSlider = $("#loreYearSlider");
+const yearDisplay = $("#loreYearDisplay");
+const mapYearLabel = $("#mapYearLabel");
+const mapYearFooter = $("#mapYearFooter");
+const yearStatus = $("#loreYearStatus");
+const cityYearRibbon = $("#cityYearRibbon");
+const yearMarks = $$(".year-mark");
+const cityYearLabels = $$(".city-file-year");
 
-// Map image fallback: the main RDR2 map is local. Guarma uses a stable
-// source with a second fallback if the first host blocks hotlinking.
-const mapFallbacks = {
-  guarma: [
-    "https://www.gtabase.com/igallery/maps/red-dead-redemption-2-map-guarma-1920.jpg",
-    "https://i.imgur.com/63f6xbr.jpg"
-  ]
-};
-
-$$('[data-map-open] .map-image-wrap img').forEach(img => {
-  img.addEventListener('error', () => {
-    const card = img.closest('[data-map-open]');
-    const key = card && card.dataset.mapOpen;
-    if (!key || !mapFallbacks[key]) return;
-    const current = img.dataset.fallbackIndex ? Number(img.dataset.fallbackIndex) : 0;
-    const next = current + 1;
-    if (next < mapFallbacks[key].length) {
-      img.dataset.fallbackIndex = String(next);
-      img.src = mapFallbacks[key][next];
-    }
-  });
+// Snapshot the current 1900 city lore before switching years.
+const publishedLore1900 = {};
+cityFiles.forEach((file, i) => {
+  publishedLore1900[i] = {
+    title: $("h3", file)?.textContent || "",
+    text: $("p", file)?.textContent || ""
+  };
 });
 
-$$("[data-map-open]").forEach(card => card.addEventListener("click", () => {
-  const data = mapArchive[card.dataset.mapOpen];
-  if (!data || !mapLightbox) return;
-  mapLightboxKicker.textContent = data.kicker;
-  mapLightboxTitle.textContent = data.title;
-  mapLightboxImage.src = data.src;
-  mapLightboxImage.alt = data.alt;
-  mapLightbox.classList.add("open");
-  mapLightbox.setAttribute("aria-hidden","false");
-  document.body.classList.add("modal-open");
-}));
+function setLoreYear(year, refreshCity=true){
+  selectedLoreYear = Number(year);
+  const published = selectedLoreYear === 1900;
 
-const closeMapLightbox = () => {
-  if (!mapLightbox) return;
-  mapLightbox.classList.remove("open");
-  mapLightbox.setAttribute("aria-hidden","true");
-  mapLightboxImage.src = "";
-  document.body.classList.remove("modal-open");
-};
+  if(yearSlider) yearSlider.value = selectedLoreYear;
+  if(yearDisplay) yearDisplay.textContent = selectedLoreYear;
+  if(mapYearLabel) mapYearLabel.textContent = selectedLoreYear;
+  if(mapYearFooter) mapYearFooter.textContent = selectedLoreYear;
+  if(cityYearRibbon) cityYearRibbon.textContent = selectedLoreYear;
 
-$$("[data-map-close]").forEach(btn => btn.addEventListener("click", closeMapLightbox));
-if (mapLightbox) {
-  mapLightbox.addEventListener("click", e => {
-    if (e.target === mapLightbox) closeMapLightbox();
-  });
+  yearMarks.forEach(mark => mark.classList.toggle("active", Number(mark.dataset.year) === selectedLoreYear));
+
+  if(yearStatus){
+    yearStatus.textContent = published
+      ? "AKTA OTWARTE · PIERWSZY ROK ARCHIWUM SEZONU II"
+      : `ARCHIWUM ${selectedLoreYear} · AKTA TEGO ROKU SĄ GOTOWE NA ODDZIELNE LORE`;
+  }
+
+  cityYearLabels.forEach(label => label.textContent = selectedLoreYear);
+
+  // Keep the map itself stable, but change its archival context.
+  document.documentElement.style.setProperty("--lore-year", `"${selectedLoreYear}"`);
+
+  // If a city is already open, refresh its contents to the selected year.
+  if(refreshCity && $("#cityModal")?.classList.contains("open")){
+    const active = $(".city-file.active");
+    const cityIndex = active ? active.dataset.cityFile : null;
+    if(cityIndex !== null) renderCityLore(cityIndex, false);
+  }
 }
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeMapLightbox();
+
+function renderCityLore(index, open=true){
+  const file = cityFiles.find(f => Number(f.dataset.cityFile) === Number(index));
+  if(!file) return;
+
+  cityFiles.forEach((f,idx)=>f.classList.toggle("active",idx===Number(index)));
+
+  const title = $("h3", file);
+  const paragraph = $("p", file);
+  const meta = $(".file-meta", file);
+
+  if(selectedLoreYear === 1900){
+    title.textContent = publishedLore1900[index]?.title || title.textContent;
+    paragraph.textContent = publishedLore1900[index]?.text || "";
+  } else {
+    title.textContent = publishedLore1900[index]?.title || "AKTA TERYTORIUM";
+    paragraph.textContent =
+      `ARCHIWUM ${selectedLoreYear} — lore dla ${publishedLore1900[index]?.title || "tego miejsca"} ` +
+      `jest osobnym rocznikiem i może zostać uzupełnione niezależnie od wydarzeń z 1900 roku. ` +
+      `Ten dokument pozostaje miejscem na kolejne wydarzenia, zmiany władzy, konflikty, postacie ` +
+      `i konsekwencje decyzji podjętych w roku ${selectedLoreYear}.`;
+  }
+
+  if(meta){
+    const label = $(".city-file-year", meta);
+    if(label) label.textContent = selectedLoreYear;
+  }
+
+  if(open) openModal("cityModal");
+}
+
+yearSlider?.addEventListener("input", e => setLoreYear(e.target.value));
+yearMarks.forEach(mark => mark.addEventListener("click", () => setLoreYear(mark.dataset.year)));
+
+$$(".lore-card,.map-pin").forEach(el => {
+  el.removeEventListener("click", ()=>{});
+  el.addEventListener("click", () => renderCityLore(el.dataset.city));
+});
+
+setLoreYear(1900, false);
+
+// Open the full RDR2 reference map from the lore map.
+$$("[data-open-map]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.dataset.openMap === "rdr2") openModal("rdr2MapModal");
+  });
 });
