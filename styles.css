@@ -244,3 +244,102 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
   }
   .brand-copy{min-width:120px}
 }
+
+/* ===== REGULAMIN FINAL PASS ===== */
+.rule-page{
+  position:relative !important;
+  padding:56px 64px 116px !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.rule-page .document-wax{
+  position:absolute !important;
+  left:50% !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:22px !important;
+  transform:translateX(-50%) rotate(-2deg) !important;
+  width:62px !important;
+  height:62px !important;
+  min-width:62px !important;
+  min-height:62px !important;
+  max-width:62px !important;
+  max-height:62px !important;
+  object-fit:contain !important;
+  opacity:.88 !important;
+  z-index:2 !important;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.22)) !important;
+}
+.rule-copy{
+  font-family:"Roboto Slab", Georgia, serif !important;
+  font-size:11.5px !important;
+  line-height:1.65 !important;
+  color:#4d3926 !important;
+}
+.rule-copy p{
+  display:block !important;
+  margin:0 0 9px !important;
+  padding:0 !important;
+  white-space:normal !important;
+}
+.rule-copy .rule-item{
+  margin-bottom:8px !important;
+}
+.rule-copy .rule-number{
+  display:inline-block !important;
+  min-width:38px !important;
+  font-weight:700 !important;
+  color:#6d4b2a !important;
+  vertical-align:top !important;
+}
+.rule-copy .rule-item .rule-number + *{}
+.rule-copy .rule-list{
+  display:block !important;
+  margin:3px 0 11px 38px !important;
+  padding:0 0 0 19px !important;
+  list-style:disc outside !important;
+}
+.rule-copy .rule-list li,
+.rule-copy .rule-sublist li{
+  display:list-item !important;
+  margin:3px 0 !important;
+  padding:0 !important;
+  line-height:1.55 !important;
+}
+.rule-copy .rule-sublist{
+  margin:3px 0 8px 20px !important;
+  padding-left:18px !important;
+  list-style:circle outside !important;
+}
+.rule-copy .rule-sublist li{
+  margin:2px 0 !important;
+}
+.rule-page h3{
+  margin:12px 0 24px !important;
+}
+.rule-page-no{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:8px !important;
+  text-align:center !important;
+  z-index:3 !important;
+}
+@media(max-width:800px){
+  .rule-page{
+    padding:45px 30px 110px !important;
+  }
+  .rule-copy{font-size:11px !important}
+}
+@media(max-width:520px){
+  .rule-page{
+    padding:42px 20px 105px !important;
+  }
+  .rule-copy{font-size:10.5px !important;line-height:1.58 !important}
+  .rule-page .document-wax{
+    width:52px !important;height:52px !important;
+    min-width:52px !important;min-height:52px !important;
+    max-width:52px !important;max-height:52px !important;
+    bottom:20px !important;
+  }
+}
