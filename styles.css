@@ -845,10 +845,6 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
 
 .map-pin.p7{left:75.9%;top:53.8%}
 
-.map-pin.p8{left:87.5%;top:27.5%}
-
-.map-pin.p9{left:89.0%;top:30.5%}
-
 .map-pin.p10{left:65.8%;top:16.8%}
 
 /* ===== ACTUAL RDR2 WORLD MAP ===== */
@@ -1213,3 +1209,7 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
   background:#24180f !important;
   transform:translate(-50%,-4px) !important;
 }
+
+.map-pin.p8{left:87.5%;top:27.5%}
+
+.map-pin.p9{left:89.0%;top:30.5%}
