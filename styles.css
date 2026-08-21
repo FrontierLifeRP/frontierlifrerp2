@@ -808,3 +808,23 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
   background-position:center !important;
   overflow:hidden !important;
 }
+
+/* ===== GUARANTEED MAP ARTWORK LAYER ===== */
+.map-board{
+  background:#cbb487 !important;
+  position:relative !important;
+  isolation:isolate !important;
+}
+.map-board .frontier-map-art{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:fill !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  user-select:none !important;
+}
+.map-board .map-pin{z-index:10 !important}
+.map-board .map-coordinates{z-index:11 !important}
