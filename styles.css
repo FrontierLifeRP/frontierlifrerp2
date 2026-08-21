@@ -1180,36 +1180,68 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
 .map-board .map-lore-badge,
 .map-board .map-instruction{display:none !important}
 
-/* ===== MAP MARKER TOOLTIP FIX ===== */
+
+/* ===== FRONTIERLIFE MAP TOOLTIP — FINAL ===== */
 .map-board .map-pin{
+  position:absolute !important;
   overflow:visible !important;
 }
-.map-board .map-pin:after{
-  z-index:100 !important;
+
+.map-board .map-pin::after{
+  content:attr(data-city-name) !important;
+  position:absolute !important;
+  left:50% !important;
+  bottom:calc(100% + 10px) !important;
+  transform:translateX(-50%) !important;
+
   display:block !important;
-  visibility:hidden !important;
-  opacity:0 !important;
+  width:max-content !important;
+  max-width:220px !important;
+  min-width:0 !important;
+  padding:7px 11px !important;
+
   background:#24180f !important;
-  border:1px solid #a37c42 !important;
-  color:#f0d6a0 !important;
-  box-shadow:0 5px 14px rgba(0,0,0,.55) !important;
-  text-shadow:none !important;
-  font-family:var(--display, "Roboto Slab", serif) !important;
+  background-color:#24180f !important;
+  color:#f1d8a3 !important;
+  border:1px solid #a47b42 !important;
+  border-radius:0 !important;
+  box-shadow:0 5px 14px rgba(0,0,0,.65) !important;
+
+  font-family:var(--display, Georgia, serif) !important;
+  font-size:9px !important;
   font-weight:700 !important;
-  letter-spacing:1px !important;
   line-height:1.2 !important;
+  letter-spacing:1.1px !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
   white-space:nowrap !important;
+  text-shadow:none !important;
+
+  opacity:0 !important;
+  visibility:hidden !important;
   pointer-events:none !important;
+  z-index:9999 !important;
+  mix-blend-mode:normal !important;
+  isolation:isolate !important;
+
+  transition:opacity .12s ease, transform .12s ease !important;
+}
+
+.map-board .map-pin:hover::after,
+.map-board .map-pin:focus-visible::after{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translate(-50%,-2px) !important;
+  background:#24180f !important;
+  color:#f1d8a3 !important;
+}
+
+/* Keep the tooltip above the map and any map overlays. */
+.map-board,
+.map-board *{
+  isolation:isolate;
+}
+.map-board .map-pin::after{
+  isolation:isolate !important;
   mix-blend-mode:normal !important;
 }
-.map-board .map-pin:hover:after,
-.map-board .map-pin:focus-visible:after{
-  visibility:visible !important;
-  opacity:1 !important;
-  background:#24180f !important;
-  transform:translate(-50%,-4px) !important;
-}
-
-.map-pin.p8{left:87.5%;top:27.5%}
-
-.map-pin.p9{left:89.0%;top:30.5%}
