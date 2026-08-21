@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FrontierLife Roleplay — 1900</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rye&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="dust"></div>
+
+  <header class="site-nav">
+    <a class="brand" href="#home">
+      <span class="brand-seal">★</span>
+      <span><b>FRONTIERLIFE</b><small>ROLEPLAY</small></span>
+    </a>
+    <nav>
+      <a href="#home">STRONA GŁÓWNA</a>
+      <a href="#archive">O SERWERZE</a>
+      <a href="#world">ŚWIAT</a>
+      <a href="#factions">FRAKCJE</a>
+      <a href="#works">PRACE</a>
+      <a href="#crime">CRIME</a>
+      <a href="#news">AKTUALNOŚCI</a>
+    </nav>
+    <a class="nav-cta" href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DOŁĄCZ</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <aside class="status-card">
+          <span class="eyebrow">SERVER STATUS</span>
+          <strong class="online"><i></i> ONLINE</strong>
+          <small>FrontierLife Roleplay</small>
+          <a href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener" class="outline-btn">POŁĄCZ SIĘ</a>
+        </aside>
+
+        <div class="hero-title">
+          <span class="est">EST. 1900 · FRONTIER STATE</span>
+          <img src="logo.png" alt="FrontierLife Roleplay" class="hero-logo">
+          <p>POGRANICZE PEŁNE NIEBEZPIECZEŃSTW,<br>HISTORIA NALEŻY DO CIEBIE.</p>
+          <div class="hero-actions">
+            <a class="gold-btn" href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DOŁĄCZ DO NAS</a>
+            <a class="text-btn" href="#archive">POZNAJ FRONTIERLIFE →</a>
+          </div>
+        </div>
+
+        <aside class="news-rail">
+          <span class="eyebrow">NAJNOWSZE WIADOMOŚCI</span>
+          <article><time>18.05</time><b>Nowa era na pograniczu</b><p>FrontierLife otrzymuje nową oprawę strony.</p></article>
+          <article><time>12.05</time><b>Aktualizacja mapy</b><p>Odkrywaj miasta i ich historie.</p></article>
+          <article><time>05.05</time><b>Event: Poszukiwania</b><p>Wieści rozchodzą się po całym stanie.</p></article>
+          <a href="#news" class="mini-link">ZOBACZ WSZYSTKIE →</a>
+        </aside>
+      </div>
+
+      <div class="hero-newspaper">
+        <div class="newspaper-masthead">THE FRONTIER CHRONICLE <span>NO. 27</span></div>
+        <div class="newspaper-date">BLACKWATER · AUGUST 1900</div>
+        <h2>NOWA ERA NA POGRANICZU</h2>
+        <div class="newspaper-grid">
+          <div class="fake-photo"></div>
+          <p>Na pograniczu znów zaczyna wrzeć. Nowe interesy, nowe twarze i stare konflikty tworzą historie, które zostaną z mieszkańcami na długo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="section dark-section">
+      <div class="section-heading">
+        <span>01 · ARCHIVES</span>
+        <h2>Witamy na pograniczu</h2>
+        <p>FrontierLife to fikcyjny świat roku 1900, w którym każda postać ma własny interes, przeszłość i miejsce w historii.</p>
+      </div>
+      <div class="archive-intro">
+        <div class="archive-cover">
+          <span>FRONTIERLIFE</span>
+          <strong>ROLEPLAY<br>ARCHIVES</strong>
+          <small>EDITION · 1900</small>
+          <div class="cover-seal">FL</div>
+        </div>
+        <div class="archive-copy">
+          <div class="ornament">✦</div>
+          <h3>Twoja historia zaczyna się tutaj.</h3>
+          <p>Dołącz do społeczności, wybierz drogę swojej postaci i buduj swoją pozycję w świecie, w którym prawo, biznes i przestępczość spotykają się na jednej granicy.</p>
+          <div class="stats-row">
+            <div><b>1900</b><span>ROK AKCJI</span></div>
+            <div><b>RP</b><span>PEŁNA IMMERSJA</span></div>
+            <div><b>∞</b><span>HISTORII DO ODEGRANIA</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="world" class="section map-section">
+      <div class="section-heading light">
+        <span>02 · THE FRONTIER</span>
+        <h2>Mapa pogranicza</h2>
+        <p>Otwórz akta miasta i poznaj jego charakter.</p>
+      </div>
+      <div class="map-board">
+        <div class="map-grid"></div>
+        <div class="river river-a"></div><div class="river river-b"></div>
+        <div class="mountain-label">CUMBERLAND<br>FOREST</div>
+        <div class="mountain-label south">GREAT PLAINS</div>
+        <div class="map-route r1"></div><div class="map-route r2"></div>
+        <button class="map-pin p0" data-city="0"><i></i><span>ARMADILLO</span></button><button class="map-pin p1" data-city="1"><i></i><span>BLACKWATER</span></button><button class="map-pin p2" data-city="2"><i></i><span>COLTER</span></button><button class="map-pin p3" data-city="3"><i></i><span>STRAWBERRY</span></button><button class="map-pin p4" data-city="4"><i></i><span>SAINT DENIS</span></button><button class="map-pin p5" data-city="5"><i></i><span>VALENTINE</span></button><button class="map-pin p6" data-city="6"><i></i><span>TUMBLEWEED</span></button><button class="map-pin p7" data-city="7"><i></i><span>RHODES</span></button><button class="map-pin p8" data-city="8"><i></i><span>ANNESBURG</span></button><button class="map-pin p9" data-city="9"><i></i><span>VAN HORN</span></button><button class="map-pin p10" data-city="10"><i></i><span>INDIANIE</span></button>
+        <div class="map-legend"><b>FRONTIER STATE</b><span>MAP · 1900</span></div>
+      </div>
+      <div class="lore-grid">
+      <button class="lore-card" data-city="0">
+        <span class="lore-card-index">01</span>
+        <span>
+          <strong>ARMADILLO</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="1">
+        <span class="lore-card-index">02</span>
+        <span>
+          <strong>BLACKWATER</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="2">
+        <span class="lore-card-index">03</span>
+        <span>
+          <strong>COLTER</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="3">
+        <span class="lore-card-index">04</span>
+        <span>
+          <strong>STRAWBERRY</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="4">
+        <span class="lore-card-index">05</span>
+        <span>
+          <strong>SAINT DENIS</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="5">
+        <span class="lore-card-index">06</span>
+        <span>
+          <strong>VALENTINE</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="6">
+        <span class="lore-card-index">07</span>
+        <span>
+          <strong>TUMBLEWEED</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="7">
+        <span class="lore-card-index">08</span>
+        <span>
+          <strong>RHODES</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="8">
+        <span class="lore-card-index">09</span>
+        <span>
+          <strong>ANNESBURG</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="9">
+        <span class="lore-card-index">10</span>
+        <span>
+          <strong>VAN HORN</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    
+      <button class="lore-card" data-city="10">
+        <span class="lore-card-index">11</span>
+        <span>
+          <strong>INDIANIE</strong>
+          <small>OPEN CITY FILE</small>
+        </span>
+        <span class="lore-arrow">→</span>
+      </button>
+    </div>
+    </section>
+
+    <section id="factions" class="section dark-section">
+      <div class="section-heading">
+        <span>03 · ORGANIZATIONS</span>
+        <h2>Akta frakcji</h2>
+        <p>Każda organizacja ma własną historię, zasady i miejsce w świecie.</p>
+      </div>
+      <div class="file-grid">
+        <article class="file-card">
+          <div class="file-photo sheriff"></div><span>CASE FILE · 001</span><h3>SHERIFF OFFICE</h3><p>Stróże prawa na pograniczu. Egzekwują porządek i odpowiadają za bezpieczeństwo mieszkańców.</p><button class="paper-link" data-file="Sheriff Office">ZOBACZ AKTA <span>↗</span></button>
+        </article>
+        <article class="file-card">
+          <div class="file-photo tms"></div><span>CASE FILE · 002</span><h3>TERRITORIAL MEDICAL SERVICE</h3><p>Służba medyczna pogranicza. Ratuje życie i dba o zdrowie mieszkańców.</p><button class="paper-link" data-file="Territorial Medical Service">ZOBACZ AKTA <span>↗</span></button>
+        </article>
+        <article class="file-card">
+          <div class="file-photo army"></div><span>CASE FILE · 003</span><h3>U.S. ARMY</h3><p>Obecność wojska na pograniczu oznacza ochronę terytorium i porządek.</p><button class="paper-link" data-file="U.S. Army">ZOBACZ AKTA <span>↗</span></button>
+        </article>
+        <article class="file-card wanted-card" id="crime">
+          <div class="file-photo crime"></div><span>CASE FILE · 004</span><h3>BANDY & CRIME</h3><p>Po drugiej stronie prawa również piszą się historie. Twórz bandę i buduj własne imperium.</p><button class="paper-link" data-file="Crime">ZOBACZ AKTA <span>↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section id="works" class="section paper-section">
+      <div class="section-heading">
+        <span>04 · LIVELIHOOD</span>
+        <h2>Prace i drogi kariery</h2>
+        <p>Od farmera po rusznikarza — wybierz sposób, w jaki zarobisz na własną historię.</p>
+      </div>
+      <div class="archive-grid">
+        
+      <article class="archive-card">
+        <div class="archive-card-top"><span>FRakcje</span><b>01</b></div>
+        <h3>Droga do bycia szeryfem</h3>
+        <div class="archive-body">
+          1. Aby dołączyć w struktury LEA (sheriff,marshall) należy kliknąć w poniższy link (discord sheriff office)
+<a class="link" href="https://discord.gg/YA38BaC3XT" style="font-size: 22px" target="_blank">- kliknij! -</a>
+          2. Po dołączeniu znaleźć kategorię "PODANIA" i utworzyć ticket.
+          3. Dalej postępować według wzoru.
+      </div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>FRakcje</span><b>02</b></div>
+        <h3>Droga do bycia medykiem</h3>
+        <div class="archive-body">
+          1. Aby dołączyć w struktury TMS należy kliknąć w poniższy link (discord Territorial Medical Service)
+<a class="link" href="https://discord.gg/4ntdVmMmJY" style="font-size: 22px" target="_blank">- kliknij! -</a>
+          2. Po dołączeniu znaleźć kategorię "📝-podania-do-frakcji" i utworzyć ticket.
+          3. Dalej postępować według wzoru.
+
+      </div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>FRakcje</span><b>03</b></div>
+        <h3>Droga do bycia członkiem Armii</h3>
+        <div class="archive-body">
+          1. Aby dołączyć w struktury 3rd Cavalery Regiment, należy kliknąć w poniższy link (discord wojska)
+<a class="link" href="https://discord.gg/j8YbUYZaa5" style="font-size: 22px" target="_blank">- kliknij! -</a>
+          2. Po dołączeniu znaleźć kategorię "KONTAKT" i utworzyć ticket.
+          3. Dalej postępować według wzoru.
+      </div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace</span><b>04</b></div>
+        <h3>Rusznikarz</h3>
+        <div class="archive-body">
+          ✧ Jak zostać Rusznikarzem? ✧
+
+          ✧ IC - Aby zostać rusznikarzem należy porozmawiać z właścicielem już aktywnego sklepu Rusznikarskiego i pytamy czy można sie u niego zatrudnić
+
+          ✧ OOC - Jeżeli chcemy sami założyć sklep rusznikarski, należy napisać podanie o firme w której rozpisujemy sie na temat sklepu - (Gdzie ma byc sklep? Dlaczego ty chcesz prowadzić sklep?)
+
+          ✧ O co chodzi w rusznikarstwie? ✧
+
+          1. Rusznikarz produkuje bronie, modyfikuje je dla graczy.
+          2. Gracz przychodzi do nas, zamawia broń, a my ją produkujemy lub modyfkujemy.
+          3. Aby rusznikarz wogóle miał możliwość produkcji broni potrzebne są materiały, które trzeba zamawiać u mieszkańców którzy zajmują się Górnictwem lub pozyskiwaniem drzewa z pobliskich lasów.
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace</span><b>05</b></div>
+        <h3>Stajenny</h3>
+        <div class="archive-body">
+          ✧ Jak zostać stajennym? ✧
+
+          ✧ IC - Aby zostać stajennym należy porozmawiać z właścicielem już aktywnej Stajni i pytamy czy można się u niego zatrudnić.
+
+          ✧ OOC - Jeżeli chcemy sami założyć Stajnie, należy napisać podanie o firmę w której rozpisujemy się na temat Stajni - (Gdzie ma byc Stajnia? Dlaczego ty chcesz prowadzić Stajnie?)
+
+          ✧ O co chodzi w byciu Stajennym? ✧
+
+          1. Stajenny zajmuje się końmi oraz ich rozmnażaniem. 
+          2. Trenuje je dla graczy i sprzedaje przedmioty dla koni.
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace</span><b>06</b></div>
+        <h3>Hodowla Bydła</h3>
+        <div class="archive-body">
+          ✧ Jak zostać hodowcą bydła? ✧
+
+          ✧ IC - Aby zostać hodowcą bydła należy zgłosić się do już istniejącego Rancza i pytamy czy można się tam zatrudnić
+
+          ✧ OOC - Należy kupić posiadłość i napisać podanie na Ranczo - Jeżeli jest możliwość prowadzenia Rancza w danej posiadłości
+
+          ✧ Czym zajmuję się hodowca? ✧
+          1. Prowadzi ranczo, dba o porządek, zajmuje się zwierzętami które może zakupić u sprzedawcy bydła w miastach.
+          2. Ranczer zaopatruje Saloony w mięso, jajka, mleko oraz skóry ze zwierząt dla graczy.
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace</span><b>07</b></div>
+        <h3>Kolejarz</h3>
+        <div class="archive-body">
+          ✧ Jak zostać kolejarzem? ✧
+
+          ✧ IC -Jeżeli istnieje już firma kolejarska - należy zgłosić się do niej i zapytać o prace.
+
+          ✧ OOC - Aby prowadzić firmę kolejarską, należy napisać podanie z gotowym już biznes planem.
+
+          ✧ Co robi kolejarz? ✧
+
+          1. Kolejarz zajmuje się obsługą pociągów, które przewożą pasażerów lub towary, realizując transport na długich trasach dla osób prywatnych oraz firm.
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace otwarte</span><b>08</b></div>
+        <h3>Farmer</h3>
+        <div class="archive-body">
+          ✧ Jak zostać farmerem? ✧
+
+          ✧ IC - Należy zakupić nasiona oraz narzędzia, gdy posiadamy miejsce w którym można sadzić rośliny, rozpoczynamy sadzić.
+
+          ✧ OOC - Farmerem może zostać każdy gracz, który zakupi nasiona i potrzebne narzędzia. Uprawiać role można Legalnie jak i nielegalnie.
+          By uprawiać role legalnie należy być w posiadaniu posiadłości. Jeżeli gracz nie ma aż tak dużo pieniędzy może na tzw. nielegalu uprawiać role.
+
+
+          ✧ Czym zajmuję się farmer? ✧
+
+          1. Bardzo proste - uprawia role, sprzedaje plony dla zwykłych mieszkańców lub firm zajmujących się produkcją żywności.
+          2. Farmer może także uprawiać różne zioła które może sprzedać u zielarza lub wykorzystać je do produkcji toników.
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace otwarte</span><b>09</b></div>
+        <h3>Rybak</h3>
+        <div class="archive-body">
+          ✧ Jak zostać Rybakiem? ✧
+
+          1. Bardzo proste - kupujemy wędkę, przynęty lub wabiki i idziemy w swoje ulubione miejsce i łowimy.
+          2. Gracz może zakupić 3 różne wędki które może ulepszyć aż 5 razy:
+          ✧ Zwykła wędka,
+          ✧ Zaawansowana wędka,
+          ✧ Profesjonalna wędka,
+          3. Każde ulepszenie powoduje łatwiejsze oraz szybsze łowienie ryb.
+          4. Ryby sprzedajemy w tym samym miejscu co zakup wędek oraz przynęt.
+          5. Rybak może pozyskiwać filety z ryb, które może sprzedawać w miastowych saloonach. (Potrzebny jest nóż do filetowania).
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace otwarte</span><b>10</b></div>
+        <h3>Zielarz</h3>
+        <div class="archive-body">
+          ✧ Jak zostać zielarzem? ✧
+
+          1. Zielarzem może zostać każdy gracz. 
+          2. Na mapie pojawiają się różnej maści ziół oraz roślin, od zwykłej marchwi do róznych składników "alchemicznych".
+          3. Zioła sprzedajemy u pobliskiego Zielarza lub też dla graczy którzy umieją wykorzystać je w jakiś sposób (produkcja toników, produkcja żywności).
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace otwarte</span><b>11</b></div>
+        <h3>Łowca</h3>
+        <div class="archive-body">
+          ✧ Jak zostać łowcą? ✧
+
+          1. Łowcą może zostać każdy który posiada jakąkolwiek broń palną lub też łuk.
+          2. Łowca pozyskuje mięso, skóry oraz inne przedmioty ze zwierząt.
+          3. Skóry oraz zwierzęta oskórowane sprzedajemy u pobliskiego rzeżnika, pozyskane z niego mięso możemy wykorzystać do produkcji jedzenia lub też możemy je sprzedać w saloonach dla większego zarobku.
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Prace otwarte</span><b>12</b></div>
+        <h3>Górnik</h3>
+        <div class="archive-body">
+          ✧ Jak zostać Górnikiem? ✧
+
+          1. Górnikiem może zostać każdy gracz który posiada kilof.
+          2. Górnik zaopatruje rusznikarzy w materiały do produkcji broni.
+          3. Górnik może także sprzedać te materiały u lokalnego górnika dla szybkiego zarobku.
+          
+          ✧ Jest także możliwość prowadzenia swojej własnej działalności kopalnianej. (potrzebne jest napisanie PODANIA).
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      <article class="archive-card">
+        <div class="archive-card-top"><span>Crime</span><b>13</b></div>
+        <h3>Tworzenie Bandy</h3>
+        <div class="archive-body">
+          1. Aby utworzyć bandę, należy wejść na główny discord serwera.
+          2. W kategorii "SERWER" znaleźć kanał "discordy".
+          3. Pośród listy odnaleźć wątek o nazwie "CRIME" i po otwarciu go, dołączyć do podanego tam serwera.
+          4. Po dołączeniu, należy przejść weryfikacje poprzez dodanie reakcji.
+          5. Po zweryfikowaniu się zobaczysz kanał "podanie-o-bandę" a na nim link do podania.
+          6. Dalej postępuj zgodnie z formularzem.
+</div>
+        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+      </article>
+    
+      </div>
+    </section>
+
+    <section id="news" class="section newspaper-section">
+      <div class="newspaper-page">
+        <div class="paper-top"><span>THE FRONTIER CHRONICLE</span><b>VOL. I</b><span>BLACKWATER · AUGUST 1900</span><b>NO. 27</b></div>
+        <h2>WIELKIE ZMIANY NA FRONTIERLIFE</h2>
+        <div class="paper-columns">
+          <div class="paper-main">
+            <div class="news-image"></div>
+            <h3>System reputacji nadchodzi na pogranicze</h3>
+            <p>Każda decyzja ma znaczenie. W świecie FrontierLife reputacja może otworzyć drzwi, zbudować zaufanie albo sprawić, że ktoś zacznie cię szukać.</p>
+            <p class="dropcap">Ostatnie tygodnie przyniosły wiele zmian. Nowe prawo, nowe możliwości oraz nadchodzące wydarzenia będą kształtować kolejne rozdziały historii mieszkańców.</p>
+            <button class="gold-btn" data-toast="Pełne archiwum aktualności będzie dostępne w kolejnym wydaniu.">CZYTAJ WIĘCEJ</button>
+          </div>
+          <aside class="paper-side">
+            <h4>INNE ARTYKUŁY</h4>
+            <div><b>01</b><span>Nowa mapa świata</span></div>
+            <div><b>02</b><span>Event: Poszukiwania</span></div>
+            <div><b>03</b><span>Poradnik dla nowych</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="cta-card">
+        <span class="eyebrow">THE FRONTIER AWAITS</span>
+        <h2>Gotowy napisać własną historię?</h2>
+        <p>Dołącz do społeczności FrontierLife Roleplay.</p>
+        <a class="gold-btn" href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DOŁĄCZ NA DISCORD</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>✦ FRONTIERLIFE</b><span>ROLEPLAY · 1900</span></div>
+    <a href="#archive">JAK ZACZĄĆ</a>
+    <a href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DISCORD</a>
+    <a href="https://frontierlife-roleplay.tebex.io/" target="_blank" rel="noopener">SKLEP</a>
+    <a href="https://www.tiktok.com/@frontierliferoleplay" target="_blank" rel="noopener">TIKTOK</a>
+    <span>DESIGNED BY BIALY</span>
+  </footer>
+
+  <!-- REGULAMIN / KSIĘGA -->
+  <div class="modal" id="rulesModal" aria-hidden="true">
+    <div class="book-shell">
+      <button class="modal-close" data-close>×</button>
+      <aside class="book-index">
+        <div class="book-brand">FRONTIERLIFE<br><small>ROLEPLAY</small></div>
+        <div class="book-title">REGULAMIN</div>
+        <span class="index-label">SPIS TREŚCI</span>
+        <div class="rule-tabs">
+          <button data-rule-tab="0">§1. Zasady Ogólne</button><button data-rule-tab="1">§2. Zasady Rozgrywki IC</button><button data-rule-tab="2">§3. Zasady Rozgrywki IC – Realizm</button><button data-rule-tab="3">§4. Postacie i Ich Prowadzenie</button><button data-rule-tab="4">§5. Akcje Hostylne</button><button data-rule-tab="5">§6. Rabunki, Porwania i Okradanie</button><button data-rule-tab="6">§7. Bandy i Firmy</button><button data-rule-tab="7">§8. Sisika</button><button data-rule-tab="8">§9. Guarma</button><button data-rule-tab="9">§10. Indianie i Rezerwaty</button><button data-rule-tab="10">System Kar dla Graczy</button>
+        </div>
+      </aside>
+      <section class="book-pages">
+        
+      <article class="rule-page" data-rule="1">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§1. Zasady Ogólne</h3>
+        <div class="rule-copy">
+
+1.1. Każdy gracz, podejmując się rozgrywki na serwerze FrontierLife RolePlay, akceptuje poniższy regulamin oraz ma obowiązek bycia na bieżąco z jego treścią.
+1.2. Od każdego gracza wymagane jest członkostwo na serwerze Discord FrontierLife RolePlay:
+• a) Gracze należący do frakcji, crime, plemienia lub prowadzący biznes zobowiązani są do dołączenia na odpowiedni serwer Discord (Frakcje, Crime, Biznesy).
+• b) Podejmując się rozgrywki w danej organizacji, gracz zobowiązany jest przestrzegać wytycznych udostępnianych przez administrację na powyższych serwerach Discord.
+1.3. Do prowadzenia rozgrywki wymagana jest odpowiednia jakość dźwięku, wolna od szumów tła. Inne metody komunikacji muszą zostać zatwierdzone przez administrację przed utworzeniem postaci.
+1.3.1. Aby zgłosić gracza, należy nagrywać rozgrywkę od momentu rozpoczęcia akcji, aż do samego jej końca. Nagranie może być nieuznane, jeśli będzie pozbawione dźwięku z gry oraz dźwięku z mikrofonu, a także, jeśli nagranie zostanie pocięte.
+1.4. Jakiekolwiek przejawy ataków personalnych, toksycznych zachowań i wulgaryzmów na serwerach FrontierLife RolePlay są kategorycznie zabronione.
+1.5. Czat OOC służy wyłącznie do:
+• przekazywania informacji, których nie możemy przekazać w grze,
+• zgłaszania problemów oraz błędów technicznych podczas rozgrywki.
+1.6. Komenda /report służy do zgłaszania błędów oraz potrzeb. Zabronione jest jej używanie w celu uzyskania revive.
+1.7. Zakazane jest przesiadywanie na streamach z rozgrywki innych graczy oraz na komunikatorach głosowych w tym celu.
+1.8. Wykorzystywanie błędów skryptowych, błędów gry, exploitów, cheatów, makro i innych zewnętrznych oprogramowań jest zabronione i skutkuje permanentną blokadą.
+• W przypadku wykrycia takiego błędu należy niezwłocznie powiadomić administrację za pomocą ticketu.
+1.9. Nick Discord musi być taki sam jak nick w grze (Steam).
+1.10. Administracja może uchylić zasady regulaminu na potrzeby zaplanowanych i zatwierdzonych przez nią akcji fabularnych.
+1.11. Wszelkie decyzje dotyczące skarg i banów są podejmowane przez administrację i są ostateczne.
+1.12. Komunikacja pomiędzy administracją a społecznością w sprawach skarg jest poufna.
+• a) Administracja może ujawnić szczegóły postępowania administracyjnego w przypadku złamania tej zasady poufności przez osobę ukaraną.
+1.13. Na serwerze obowiązuje przestrzeganie zasad streamingu, w tym bezwzględny zakaz używania określeń takich jak n-word, p-word, c-word i podobnych.
+1.14. Choć akcja rozgrywa się w roku 1900 w Ameryce, historia serwera nie jest bezpośrednio powiązana z historią tego kraju.
+• Odgrywanie ról lub nawiązywanie do wydarzeń historycznych takich jak „Szlak łez”, niewolnictwo, rewolucja amerykańska, wojna domowa, brak praw kobiet itp. jest zabronione bez wyraźnej zgody drugiej strony.
+1.15. Zabrania się wchodzenia na kanał pomocy przed skończeniem akcji RP.
+</div>
+        <div class="rule-page-no">PAGE 01 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="2">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§2. Zasady Rozgrywki IC</h3>
+        <div class="rule-copy">
+2.1. IC (In Character) – rzeczywistość, w której funkcjonuje wykreowana przez nas postać i jej historia.
+2.2. OOC (Out of Character) – wszelkie działania i treści odnoszące się do realnego świata, niezwiązane z odgrywaniem roli.
+2.3. BW (Brutally Wounded) – stan ciężkiego zranienia, w którym postać traci zdolność poruszania się.
+2.4. CL (Combat Logging) – opuszczenie serwera podczas trwającej akcji RP lub tuż przed jej konsekwencjami, aby uniknąć odpowiedzialności.
+2.5. Metazwroty – komunikaty wykorzystywane w grze w celu opisania zjawisk OOC, np. nazywanie braku aktywności „zamyśleniem się”, tłumaczenie niedziałającego mikrofonu „chrypką” albo określanie restartu serwera „zaćmieniem”.
+2.6. FearRP – obowiązek realistycznego reagowania postaci na zagrożenia i stawiania zdrowia oraz życia swojego i innych ponad wszystko. Nieprzestrzeganie tej zasady może skutkować trwałym okaleczeniem postaci lub natychmiastowym FCK – jeśli administracja wyrazi na to zgodę.
+2.7. MG (Metagaming) – wykorzystywanie informacji zdobytych poza światem gry (OOC) w rozgrywce (IC) w celu zmiany decyzji lub zachowań postaci.
+2.8. PG (Power Gaming) – narzucanie innym graczom przebiegu akcji bez możliwości reakcji z ich strony oraz prowadzenie scenariusza wyłącznie dla własnej korzyści.
+2.9. Wyjście z roli – specyficzna forma FailRP obejmująca m.in. niespójne działania postaci, używanie metazwrotów czy błędne zastosowanie czatu OOC.
+2.10. Loot RP – przejmowanie przedmiotów z ekwipunku innych graczy bez odgrywania odpowiedniej sceny lub seryjne kradzieże bez rozwijania fabuły. Całość przeszukania musi zostać odegrana komendami narracyjnymi /me i /do, w przeciwnym razie może to zostać potraktowane jako Loot RP.
+2.11. Cop Baiting – prowokowanie funkcjonariuszy prawa w celu wzbudzenia ich reakcji i rozpoczęcia interakcji RP.
+2.12. RK (Revenge Kill) – powracanie po reanimacji lub leczeniu do osoby odpowiedzialnej za zgon w celu odwetu.
+2.13. RDM (Random Deathmatch) – atakowanie innych graczy lub NPC bez fabularnego uzasadnienia.
+2.14. FailRP – prowadzenie rozgrywki w sposób nielogiczny, nieprawdziwy lub niewykonalny dla postaci.
+2.15. CK (Character Kill) – trwałe uśmiercenie własnej postaci, którego nie można cofnąć.
+2.16. FCK (Force Character Kill) – ostateczne zabicie postaci innego gracza.
+2.17. CN (Celebrity Name) – tworzenie postaci o personaliach znanej osoby rzeczywistej lub fikcyjnej.
+2.18. Immersja – pełne wczucie się w rolę postaci oraz świat gry.
+2.19. WMG – wykorzystywanie mechaniki gry w sposób nieuczciwy, np. wielokrotne przywoływanie konia w celu bezpiecznego przenoszenia kontrabandy.
+2.20. Miasto Duchów – określenie oznaczające fabularny zakaz porywania i przeprowadzania brutalnych akcji w ścisłym centrum miasta w obecności dużej liczby świadków (gapiów, NPC, graczy). Zasada ta ma na celu zachowanie realizmu rozgrywki – w miejscach publicznych i zatłoczonych działania przestępcze powinny być ograniczone lub odpowiednio ukryte. 
+</div>
+        <div class="rule-page-no">PAGE 02 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="3">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§3. Zasady Rozgrywki IC – Realizm</h3>
+        <div class="rule-copy">
+3.1. Wydarzenia na serwerze toczą się w fikcyjnym stanie Frontier w Stanach Zjednoczonych, w schyłkowym okresie Dzikiego Zachodu (rok 1900). Gracze są zobowiązani do odgrywania postaci w zgodzie z realiami epoki.
+3.2. Każde użycie lassa traktowane jest jako czynność ostateczna. Nadmierne wykorzystywanie tej mechaniki jest uznawane za PG.
+• Można rzucać raz na 30 sekund.
+• Podczas pościgu konnego – raz na całą akcję.
+• Każde użycie lassa musi zostać zainicjowane werbalnie mimo wcześniejszego zainicjowania akcji agresywnej.
+3.3. Samodzielne uwalnianie się z lassa w obecności napastników jest traktowane jako brak poszanowania życia.
+3.4. Zabronione jest nawiązywanie do polskiej historii, kultury i symboliki (Wyjątek stanowi odgrywanie postaci pochodzącej z Polski).
+3.5. W przypadku opuszczenia gry z powodu błędu technicznego należy opublikować dowód (np. zrzut ekranu) na kanale #crashe z widoczną datą i treścią komunikatu błędu.
+3.6. Broń w grze powinna być traktowana jako realne zagrożenie życia, a jej użycie musi być ostatecznością.
+3.7. Osoby korzystające z balonów nie mogą lądować w centrum miast ani poruszać się nad dachami budynków.
+3.8. Własnoręczne wykonywanie muzyki oraz wykorzystywanie jej w rozgrywce jest dopuszczalne, o ile nie wykracza poza realia historyczne.
+3.9. Zakazuje się podszywania pod służby mundurowe oraz tworzenia grup o podobnym charakterze bez zgody administracji.
+3.10. Inicjowanie wydarzeń wykraczających poza zwykłą przemoc (np. tortury, akty erotyczne, przemoc seksualna, nadawanie ran trwałych, molestowanie) wymaga obustronnej zgody OOC (lub zgody administracji) oraz wcześniejszego ustalenia poziomu szczegółowości opisów.
+3.11. Gdy gracz musi odejść od komputera, powinien wyjść z gry lub pozostawić postać w miejscu neutralnym.
+3.12. Administracja może wprowadzić wytyczne wobec grupy lub organizacji w celu utrzymania płynności rozgrywki i zasad fair play.
+3.13. Zakazuje się podejmowania wrogich działań wobec innych postaci podczas wydarzeń zbiorowych bez fabularnego uzasadnienia.
+</div>
+        <div class="rule-page-no">PAGE 03 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="4">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§4. Postacie i Ich Prowadzenie</h3>
+        <div class="rule-copy">
+4.1. Każda postać musi być wiarygodna, spójna oraz zgodna z realiami XIX wieku.
+4.2. Zakazane jest tworzenie postaci opartej wyłącznie na nienawiści rasowej, homofobii, seksizmie lub ksenofobii.
+4.3. Postać powinna mieć ukończone 18 lat w uniwersum gry.
+4.4. Zakazane jest posiadanie dwóch postaci powiązanych ze sobą. Pierwsza postać, w żaden sposób nie może nawiązywać / współpracować z drugą, trzecią, czy czwartą.
+• a) Odwoływanie się do historii śmierci postaci z innych serwerów jest zabronione.
+• b) Druga postać gracza nie może należeć do strony przeciwnej w stosunku do pierwszej postaci. Przykładowo, jeśli pierwsza postać pełni rolę szeryfa, druga postać nie może być bandytą. Zasada ta dotyczy również frakcji LEA.
+4.5. Granie postaci chorej psychicznie jest możliwe tylko za zgodą administracji.
+4.6. Po stanie BW należy odczekać minimum 30 minut przed podjęciem kolejnych działań hostylnych.
+• Jeśli postać została uleczona poprzez zrespienie się (przytrzymanie klawisza "E") - nie może pamiętać ostatnich 30 minut przed stanem BW.
+• Jeśli postać zostanie zabrana do lokalnego medyka lub uleczona przez medyka-gracza - pamięta wszystkie ewentualne zdarzenia.
+4.7. Aby prowadzić równolegle postać po stronie prawa i przestępczości, wymagana jest zgoda administracji.
+4.8. Po CK i FCK zakazuje się tworzenia osoby spokrewnionej z poprzednią postacią, a także powrotu na te same posady itp., chyba że rozgrywka IC do tego doprowadzi.
+4.9. Dozwolona jest zmiana fryzury lub brody w sposób realistyczny w czasie i logice.
+4.10. Zmiana nie może nastąpić natychmiast ani całkowicie zmienić wyglądu postaci.
+4.11. Zmiana nie może uniemożliwiać rozpoznania postaci.
+4.12. W przypadku nierealistycznej zmiany należy dodać opis charakteryzacji, który umożliwia tropienie postaci przez innych graczy.
+4.13. Zakazuje sie tworzenia postaci z nierealnymi imionami i nazwiskami (np. Sam Sung, Xia Omi itp.)
+4.14. Korumpowanie urzędników i służb państwowych wymaga zgody administracji poprzez ticket.
+4.15. Po zakończeniu akcji hostylnej nie wolno całkowicie zmieniać wyglądu postaci w sposób uniemożliwiający jej identyfikację. (Dozwolona jest zmiana ubioru, jednak musi pozostać element rozpoznawczy (np. buty, chusta, kapelusz, torba)
+</div>
+        <div class="rule-page-no">PAGE 04 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="5">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§5. Akcje Hostylne</h3>
+        <div class="rule-copy">
+5.1. Akcję wrogą należy rozpocząć jawnym kontaktem werbalnym, dając około 5 sekund na reakcję
+drugiej strony. (Do akcji hostylnych zaliczamy także zatrzymania prowadzone przez szeryfów)
+5.2. W akcji hostylnej maksymalnie 6 osób może występować po stronie inicjującej.
+5.3. Gracz ma prawo do obrony we wszystkich sytuacjach, z wyjątkiem tych, w których strona atakująca posiada przewagę minimum dwóch osób.
+• Przykłady:
+• 1 vs 3 —> gracz nie może się bronić.
+• 2 vs 3 i 1 vs 2 —> gracze mogą się bronić pod warunkiem, że mają wcześniej wyciągniętą broń i nie są odwóceni plecami do napastników.
+5.4. Ograniczenia liczebności graczy przy akcjach:
+• Napad na bank: 5 napastników vs 6 stróżów prawa (negocjator wliczony)
+• Napad na sklep: 1–3 napastników vs 4 stróżów prawa (+1 do negocjacji)
+• Napad na pociąg: 4 napastników vs 5 stróżów prawa
+• Sprzedaż kontabandy: 3 napastników vs 3 stróżów prawa
+• Kopanie grobów: 2 napastników vs 2 stróżów prawa
+• Kontrola narkotyków: min. 6 napastników, obrońcy pozbawieni ograniczeń
+• Napad na fort: bez limitu dla broniących się
+• Jeśli stróże prawa nie pojawią się w ciągu 10 minut, napastnicy mogą odejść.
+5.5. każdy limit może zostać zniesiony poprzez kontakt z administacją oraz/lub poprzez wcześniejsze dogadanie się ze stroną przeciwną.
+5.6. Nie wolno rozpoznawać zamaskowanych osób po głosie, jeśli ta osoba zmieniła choć odrobinę głos. Napastników można także rozpoznać przez 40 minut, jeśli ci nie zmienili swojego stroju. (Całego stroju)
+5.7. Dołączenie do trwającej akcji hostylnej jest zabronione (wyjątek – stróże prawa).
+5.8. Wkraczanie w trwającą akcję hostylną pomiędzy dwiema stronami będzie traktowane jako „wjazd na trzeciego”.
+5.9. Nie wolno wzywać medyków w trakcie akcji hostylnej.
+5.10. Zakazuje się rozpoczynania akcji hostylnych w stronę Medyków na służbie bez dobrego podłoża Roleplay'owego 
+5.11. W przypadku problemów technicznych uniemożliwiających wykonanie akcji należy odgrywać konsekwencje.
+5.12. Maksymalna liczba członków w jednej ekipie: 12 osób.
+</div>
+        <div class="rule-page-no">PAGE 05 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="6">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§6. Rabunki, Porwania i Okradanie</h3>
+        <div class="rule-copy">
+6.1. Każdy rabunek musi być logicznie umotywowany fabularnie.
+6.2. Ograniczenia łupów:•
+• Zabranie wszystkich broni gracza jest dozwolone wyłącznie, jeśli spełniony jest jeden z poniższych warunków:
+• Osoba rabowana jako pierwsza zainicjowała akcję hostylną na tobie.
+• Osoba rabowana próbowała się bronić, ale obrona była nieskuteczna oraz strona atakująca posiada przynajmniej jedną osobę więcej.
+• W innych przypadkach należy pozostawić graczowi przynajmniej jedną broń. 
+6.3. Podczas jednego rabunku można wybrać jedną kategorię łupu.
+• Kontrabanda może zostać zabrana w całości niezależnie od wybranej kategorii.
+A) Rzeczy Frakcyjne
+• Zakazuje się okradania przedstawicieli frakcji (szeryf, medyk) z ich przedmiotów służbowych bez zgody administracji.
+B) Broń
+• Jeśli warunki punktu 6.2 nie są spełnione, należy pozostawić graczowi przynajmniej jedną broń (pomijając broń białą).
+C) Pieniądze
+• Maksymalnie można zabrać połowę gotówki gracza.
+D) Inne Przedmioty
+• Maksymalnie można zabrać połowę ilości danego przedmiotu.
+6.8. Związanie gracza bez opisu narracyjnego możliwe jest jedynie, gdy postać trzyma ręce w górze. (Wyjątek stanowi ucieczka od napastników lub stróżów prawa )
+6.9. Nie wolno zmuszać graczy do opróżniania skrytek skryptowych (banki, domy, skrzynie, obozy).
+6.10. Porwania funkcjonariuszy i medyków muszą mieć istotne tło fabularne.
+6.11. Powrót do tej samej grupy przestępczej na nowej postaci po FCK jest zakazany.
+6.12. Po zerwaniu negocjacji należy zapewnić obu stronom minimum 10 sekund na reakcję.
+6.13. Porwania i tortury mogą trwać maksymalnie 40 minut. Możliwe jest przedłużenie czasu za zgoda administacji lub za obustronną zgodą na czacie ooc
+</div>
+        <div class="rule-page-no">PAGE 06 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="7">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§7. Bandy i Firmy</h3>
+        <div class="rule-copy">
+7.1. Grupy przestępcze liczące ponad 5 członków muszą być zgłoszone administracji poprzez ticket crime o założenie bandy.
+7.2. Liderzy odpowiadają za działania członków organizacji.
+7.3. Haracze mogą być pobierane raz na tydzień z maksymalnie dwóch firm/frakcji – bez zgody administracji do łącznej kwoty 350$ (do pobierania większej kwoty potrzebna jest zgoda administracji i konkretne podłoże RP).
+7.4. Zmiana lidera bądź właściciela wymaga fabularnego uzasadnienia i zgłoszenia administracji.
+7.5. Pracownikom zabrania się okradania skrytek firm i organizacji legalnych.
+</div>
+        <div class="rule-page-no">PAGE 07 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="8">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§8. Sisika</h3>
+        <div class="rule-copy">
+8.1. Sisika to więzienie o najwyższym rygorze – gracze powinni odgrywać odpowiednią atmosferę.
+8.2. Każda ucieczka musi być nadzorowana przez administrację lub nagrana.
+</div>
+        <div class="rule-page-no">PAGE 08 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="9">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§9. Guarma</h3>
+        <div class="rule-copy">
+9.1. Zasady przebywania na Guarmie i niewoli
+• Każdy gracz przebywający na Guarmie bez pozwolenia, jest traktowany jako zagrożenie, wobec którego dozwolone jest użycie broni ze strony Guarmistów.
+• Gracz schwytany przez Guarmistów może przebywać w niewoli maksymalnie półtorej godziny.
+• W przypadku natarczywego naruszania praw przebywania na Guarmie, lokalne władze mogą wnioskować o FCK dla gracza.
+• Administracja może wydać zgodę na wydłużenie czasu przetrzymywania do kilku dni lub na wykonanie FCK danej postaci.
+9.2. Odgrywanie i Sankcje
+• Zakazuje się nastawienia na łapanie graczy, rozumiane przez wyjazdy do Ameryki wyłącznie w celu wyłapywania ludzi i sprowadzania ich do pracy będą traktowane jako LowRP.
+• Kary indywidualne: Niezastosowanie się do powyższych zasad będzie skutkowało nakładaniem ostrzeżeń (warnów) oraz banów na graczy. 
+9.3. Kary organizacyjne / Frakcyjne
+• Uzyskanie 3 ostrzeżeń (lub rażące złamanie zasad Roleplayu) skutkować będzie natychmiastowym, fabularnym zamknięciem wątku/organizacji. 
+</div>
+        <div class="rule-page-no">PAGE 09 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="10">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>§10. Indianie i Rezerwaty</h3>
+        <div class="rule-copy">
+10.1. Rdzenni mieszkańcy zamieszkują Rezerwaty Achomawi oraz Wapiti.
+10.2. Ich prawa obowiązują wszystkich graczy odwiedzających rezerwaty.
+10.3. W razie pogwałcenia tych zasad grozi uwięzienie lub FCK.
+</div>
+        <div class="rule-page-no">PAGE 10 / 11</div>
+      </article>
+    
+      <article class="rule-page" data-rule="11">
+        <div class="rule-kicker">FRONTIER LIFE ROLEPLAY · ARCHIVES</div>
+        <h3>System Kar dla Graczy</h3>
+        <div class="rule-copy">
+RANDOM DEATHMATCH - 3-5 DNI BEZ MOŻLIWOŚCI SKRÓCENIA.
+REVENGE KILL - 3-5 DNI BEZ MOŻLIWOŚCI SKRÓCENIA.
+TROLL/CHEAT - 30DNI-PERM (W ZALEŻNOŚCI OD SYTUACJI).
+FAILRP - WARN-5 DNI
+METAZWROTY - WARN-3 DNI
+METAGAMING - 3-14 DNI (W ZALEŻNOŚCI OD SYTUACJI)
+POWERGAMING - WARN-7 DNI
+CELEBRITY NAME - PERM DO MOMENTU NAPISANIA TICKETA O ZMIANE DANYCH
+WYKORZYSTANIE MECHANIKI GRY - 3-7 DNI (W ZALEŻNOŚCI OD SYTUACJI)
+WYKORZYSTANIE BŁĘDÓW SERWERA BEZ ZGŁOSZENIA - PERM-14 DNI (W ZALEŻNOŚCI OD SYTUACJI)
+ODGRYWANIE KORUMPA BEZ ZGODY ADMINISTRACJI - 7-14 DNI
+LOWRP - WARN-5 DNI 
+COMBATLOG 1/3 - 3 DNI (CLEAR EQ)
+COMBATLOG 2/3 - 6 DNI (CLEAR EQ)
+COMBATLOG 3/3 - PERM
+LOOTRP - 3-7
+NIEPOSZANOWANIE ŻYCIA - 1-5 DNI
+NOWOMOWA - 7H-48H
+TRASH TALK -  3-7 DNI  (W ZALEŻNOŚCI OD SYTUACJI)
+CHARACTER KILL - PERM DO MOMENTU NAPISANIA TICKETA O USUNIĘCIE POSTACI.
+BANY NA 24H LUB MNIEJ NIE MAJĄ MOŻLIWOŚCI SKRÓCENIA.
+KAŻDE ODWOŁANIE OD NAŁOŻONEGO BANA MOŻE ZOSTAĆ ZŁOŻONE DOPIERO PO UPŁYWIE 24H.
+RECYDYWA - JEŚLI W HISTORII GRACZA WIDNIEJE JUŻ KTÓREŚ Z PRZEWINIEŃ = PODWOJONA KARA.
+</div>
+        <div class="rule-page-no">PAGE 11 / 11</div>
+      </article>
+    
+        <div class="book-controls"><button data-prev>← POPRZEDNIA</button><span id="ruleCounter">PAGE 01 / 11</span><button data-next>NASTĘPNA →</button></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- AKTA MIASTA -->
+  <div class="modal" id="cityModal" aria-hidden="true">
+    <div class="city-shell">
+      <button class="modal-close" data-close>×</button>
+      <div class="city-doc">
+        
+      <article class="city-file" data-city-file="0">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 01</div>
+        <h3>ARMADILLO</h3>
+        <p>Armadillo – od miasta widma do meksykańskiego feniksa.
+Armadillo jeszcze nie dawno niemal przestało istnieć. Straszliwa epidemia pustoszyła ulice, a ci, którzy przeżyli, uciekli w głąb lądu lub porzucili swoje domy. Miasto wyglądało jak cmentarz – porzucone wozy, zrujnowane budynki, cisza przerywana tylko przez wiatr i krakanie kruków. Jednak w roku 1900 wydarzyło się coś, co odmieniło oblicze tej krainy. Na zachód dotarli Meksykanie – handlarze, rzemieślnicy, robotnicy i całe rodziny, które postanowiły osiedlić się na zgliszczach Armadillo. Niektórzy byli potomkami dawnych mieszkańców północnego Meksyku, inni uciekali przed biedą i konfliktami, jakie targały ich ojczyzną. Pod ich rękami miasto zaczęło powstawać na nowo – ale już nie jako kopia dawnych osad pogranicza, lecz jako miasto z duszą meksykańską. Wznoszono nowe domy w adobe, place ozdabiano kolorowymi tkaninami, a na ulicach rozbrzmiewała muzyka. Dawny saloon zamieniono w głośną cantinę, a rynek wypełniły stragany z przyprawami i owocami sprowadzanymi z południa. Armadillo, jeszcze niedawno przeklęte, zaczęło tętnić życiem – stało się punktem spotkań handlarzy, podróżników i rewolwerowców. Meksykańska kultura nadała mu barwy i ciepło, jakich brakowało w surowym klimacie pogranicza. Ale ta przemiana nie obyła się bez konfliktów – niektórzy dawni mieszkańcy, którzy wrócili po latach, patrzyli z niechęcią na nowych osadników, a Amerykańskie władze z niepokojem śledziły wzrastające wpływy południowych sąsiadów. W roku 1900 Armadillo stało się jednak symbolem odrodzenia – feniksem, który powstał z popiołów zarazy, łącząc w sobie dziedzictwo pogranicza i energię nowego życia wniesioną przez Meksykanów.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="1">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 02</div>
+        <h3>BLACKWATER</h3>
+        <p>Blackwater – miasto przyszłości. Blackwater wyrastało na symbol nowej Ameryki. W 1900 roku ulice tętniły gwarem, gazowe latarnie rozświetlały noc. Dla wielu było to miejsce marzeń – bogaci kupcy inwestowali w handel rzeczny i przemysł, a młodzi ludzie wierzyli, że właśnie tu mogą zacząć nowe życie. Ale Blackwater miało też swoje cienie – rosnące nierówności, biedne dzielnice zamieszkiwane przez przybyszy, oraz wspomnienia krwawych wydarzeń sprzed kilku lat, gdy gangi i bandyci rzuciły wyzwanie rodzącemu się „cywilizowanemu” światu. Do dawnych traum dochodziły też nowe napięcia – w 1900 roku mieszkańcy Blackwater coraz otwarciej wyrażali niechęć wobec ludzi z Valentine. Uważano ich za dzikich ranczerów i pijanych awanturników, którzy stoją na drodze postępowi i marzeniom o nowoczesnej przyszłości. Niechęć ta szybko przeradzała się w otwarte spory, które groziły rozpaleniem dawno wygasłych płomieni przemocy.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="2">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 03</div>
+        <h3>COLTER</h3>
+        <p>Colter – Serce skute lodem. W wysokich, skutej lodem górach północy leży Colter – dawna osada, która w 1900 roku była już tylko cieniem ludzkich marzeń. Drewniane chaty, przytulone do zboczy, stały opuszczone, skrzypiące na wietrze, a zaspy śniegu zakrywały dawne ścieżki i drogi... A przynajmniej tak mówili dotychczas ludzie. Krązą pogłoski, że teraz mieszkają tam dawniej bardzo sławni bandyci, którzy uciekli od jakiejkolwiek cywilizacji żeby odsapnąć od ciągłych strzelanin, bójek i kradzieży. Przecież każdy, nawet najbrutalniejszy z bandytów potrzebuje chwili spokoju... Prawda? Nikt nie wie czy te plotki są prawdziwe, ponieważ jest niewiele śmiałków, którzy mają na tyle odwagi by wyruszyć w tak srogą podróż do tej zimnej krainy ale kto wie? Może kiedyś znajdzie się parę odważnych by potwierdzić tą historię...</p>
+      </article>
+    
+      <article class="city-file" data-city-file="3">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 04</div>
+        <h3>STRAWBERRY</h3>
+        <p>Strawberry – zielony azyl. Strawberry, choć niewielkie, wyróżniało się malowniczym położeniem. Drewniane domy otoczone górami i lasami sprawiały, że miasteczko miało niemal bajkowy urok. W 1900 roku przyciągało turystów i wędrowców szukających wytchnienia od zgiełku wielkich miast. Mówiono, że Strawberry to miasto relaksu – ludzie przyjeżdżali tu, by pooddychać świeżym, górskim powietrzem i odpocząć od dymu i hałasu Saint Denis czy Blackwater. Goście zatrzymywali się w niewielkich gospodach, chodzili na długie spacery leśnymi ścieżkami i podziwiali piękno dzikiej przyrody. Jednak nie wszyscy patrzyli na Strawberry jak na spokojny raj – bogaci inwestorzy chcieli uczynić z niego górskie uzdrowisko, podczas gdy lokalni mieszkańcy obawiali się, że stracą swój skromny, lecz wolny sposób życia. W cieniu zielonych wzgórz toczyła się więc cicha walka o to, czy Strawberry pozostanie małym miasteczkiem, czy stanie się kolejnym symbolem cywilizacji i chciwości.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="4">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 05</div>
+        <h3>SAINT DENIS</h3>
+        <p>Saint Denis – brama na świat. Saint Denis wciąż pozostawało największym, najbardziej kosmopolitycznym miastem regionu. Port był zatłoczony statkami, które przywoziły towary z Europy i Karaibów, a ulice wypełniały wozy pełne robotników i dorożki bogaczy. Dźwięki języków z całego świata mieszały się w hałasie tego tętniącego życiem miejsca. Choć z zewnątrz Saint Denis wydawało się symbolem nowoczesności, w rzeczywistości miasto było kontrolowane z cienia przez mafię. Organizacje przestępcze, powiązane z dokami, saloonami i hazardem, decydowały o tym, kto mógł prowadzić interes, a kto znikał bez śladu. Kupcy i politycy często byli tylko marionetkami w rękach bossów, którzy nigdy nie pokazali się publicznie, ale których wpływy sięgały od portu aż po najwyższe piętra ratusza.W ciasnych, ciemnych uliczkach miasta kwitł nielegalny handel – od przemycanych trunków i opium, po broń i egzotyczne towary, które nigdy nie trafiały na oficjalne rejestry portowe. W roku 1900 Saint Denis było więc zarówno oknem Ameryki na świat, jak i mrocznym labiryntem intryg, gdzie każdy krok mógł sprowadzić na człowieka zgubę.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="5">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 06</div>
+        <h3>VALENTINE</h3>
+        <p>Valentine – brudne serce stanu. Valentine było surowym miasteczkiem pogranicza. Tu, w 1900 roku, codzienność wciąż pachniała sianem, potem i alkoholem. Farmerzy i hodowcy bydła przyjeżdżali tu sprzedawać swoje towary, a kowboje przepijali zarobek w dusznych saloonach. Miasto było znane z bójek i awantur – szeryf miał pełne ręce roboty, a każdy, kto chciał tam prowadzić interes, musiał liczyć się z tym, że prędzej czy później ktoś wpadnie do jego drzwi z rewolwerem u boku. Mieszkańcy Valentine darzyli też wyraźną niechęcią ludzi z Blackwater, których uważali za zadufanych mieszczuchów, chcących wykupić ich ziemię i zniszczyć stary, kowbojski porządek. W saloonach często słychać było, że „Blackwater sprzedaje duszę za pieniądze, a Valentine wciąż walczy o swoją wolność”. Mimo chaosu i biedy, Valentine przyciągało ludzi – jako miejsce, gdzie można było spróbować szczęścia, choć ryzykowało się wszystko.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="6">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 07</div>
+        <h3>TUMBLEWEED</h3>
+        <p>Tumbleweed – zapomniane miasto na nowo odkryte. Na dalekim zachodzie, w skąpanym słońcem i pyłem regionie New Austin, Tumbleweed przez lata uchodziło za miasteczko zapomniane przez świat. Choć niegdyś tętniło handlem i kowbojskim życiem, z czasem coraz więcej ludzi przenosiło się do sąsiednich osad, a Tumbleweed traciło znaczenie. Jednak w roku 1900 na jego ulice zajechali Meksykanie – kupcy, rzemieślnicy i rodziny, które szukały nowego początku. Z pustych budynków zaczęły rodzić się tawerny, sklepy i warsztaty. Dawny, zaniedbany rynek rozbrzmiał gwarem, a w powietrzu czuć było zapach przypraw i pieczonej kukurydzy. Pod ich rękami Tumbleweed odżyło – stało się miejscem, gdzie kultura pogranicza spotykała się z żywiołowością Meksyku. Uliczkami niesiono muzykę gitar i trąbek, a nocami cantiny tętniły życiem do samego świtu. Miasto, które kiedyś chyliło się ku upadkowi, znów przyciągało handlarzy, podróżników i rewolwerowców. W roku 1900 Tumbleweed stało się więc miastem odrodzonym, żywym dowodem, że nawet na zapomnianych rubieżach można odnaleźć nowe życie.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="7">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 08</div>
+        <h3>RHODES</h3>
+        <p>Rhodes - Dziedzictwo Południa. Rhodes to niewielkie miasteczko w sercu hrabstwa Lemoyne, które do dziś nosi piętno wojny secesyjnej. W latach 60. XIX wieku większość jego mieszkańców poparła sprawę Konfederacji. Po klęsce Południa miasto nigdy w pełni nie podniosło się z ruiny – dawne plantacje uległy zniszczeniu, a wielu weteranów powróciło z frontu bez majątku, z goryczą w sercach. Miasto na rozdrożu Na początku XX wieku Rhodes wydaje się zwykłym, spokojnym miasteczkiem z targiem, kościołem i kilkoma odnowionymi plantacjami. Jednak pod powierzchnią wciąż buzują napięcia: część mieszkańców pragnie budować nowe życie w zgodzie z prawem federalnym, inni pielęgnują pamięć o dawnym porządku i marzą o „odrodzeniu Południa”. Codzienność w cieniu strachu Na co dzień życie toczy się zwyczajnym rytmem – na rynku słychać nawoływania kupców, a w saloonie przy głównym placu zbierają się mieszkańcy, by omawiać nowiny. Jednak każdy wie, że w nocy okolice miasteczka stają się niebezpieczne. Plotki o spotkaniach tajnych bractw, o nieznajomych na drogach i o znikających podróżnych krążą niemal w każdej rozmowie. Rhodes w 1900 roku Miasteczko stoi na granicy dwóch światów: z jednej strony – cywilizacja, handel i powolny rozwój, z drugiej – cień wojny, wrogość i stare urazy, które nigdy nie wygasły.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="8">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 09</div>
+        <h3>ANNESBURG</h3>
+        <p>Annesburg – miasto węgla i ciężkiej pracy. Na północnym wschodzie, nad rzeką Kamassa, leży Annesburg – miasteczko zbudowane na węglu. W 1900 roku życie mieszkańców kręciło się wokół kopalni, gdzie mężczyźni, kobiety i dzieci spędzali długie godziny pod ziemią. Pył, głód i częste wypadki były codziennością. Nieopodal działała też mała kopalnia, która początkowo dawała nadzieję na lepsze warunki, lecz szybko stała się źródłem rywalizacji i konfliktów z potężnymi właścicielami głównych szybów. Annesburg był miejscem ciężkiej pracy i biedy – miastem, do którego rzadko kto przybywał z własnej woli.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="9">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 10</div>
+        <h3>VAN HORN</h3>
+        <p>Van Horn – Przekleństwo pogranicza. W 1900 roku sława tego miejsca była tak ponura, że nawet doświadczeni podróżnicy ostrzegali przed wyruszeniem w jego stronę. Van Horn to miasteczko bez prawa. Szeryf nigdy tu nie zawitał, a wszelka władza spoczywała w rękach bandytów i złodziei, którzy zrobili z ulic przystań dla swoich interesów. Nielegalny handel kwitł na każdym rogu – broń, alkohol, opium i skradzione towary przechodziły z rąk do rąk w dusznych, zadymionych saloonach. Na dokach, gdzie rzeka stykała się z zapadłymi magazynami, można było znaleźć wszystko – od przemytniczych skrzyń po zaginionych ludzi, którzy odważyli się wejść do Van Horn bez eskorty. Nocami rozbrzmiewały tam strzały i pijackie krzyki, a każdy, kto się potknął, ryzykował, że już nigdy nie ujrzy poranka. Mieszkańcy mówili półgłosem, że w Van Horn życie warte jest mniej niż kula. Kupcy i podróżni wiedzieli, że jeśli już muszą tędy przejechać, powinni trzymać się z dala od uliczek, nie patrzeć nikomu w oczy i nie zadawać pytań. Van Horn było więc symbolem upadku – miejscem, gdzie nie rządziło prawo ani sprawiedliwość, lecz chciwość i przemoc. Każdy, kto wyruszał w drogę ku tej osadzie, musiał wiedzieć jedno: to podróż w serce ciemności, z której nie każdy powracał.</p>
+      </article>
+    
+      <article class="city-file" data-city-file="10">
+        <div class="file-stamp">FRONTIER ARCHIVE</div>
+        <div class="file-meta">CASE FILE · 11</div>
+        <h3>INDIANIE</h3>
+        <p>Plemię Czerenów Plemię Czerenów było niegdyś jednym z najbardziej dumnych i samowystarczalnych ludów tych ziem. Przez pokolenia żyliśmy w harmonii z naturą, szanując jej rytm, zwierzęta oraz duchy przodków. Ziemia dawała nam wszystko, czego potrzebowaliśmy, a my braliśmy tylko tyle, ile było konieczne do przetrwania.W wierzeniach Czerenów zwierzęta nie są jedynie pożywieniem. Są darem duchów, źródłem życia i równowagi świata. Każde zabite zwierzę oddaje część swojej duszy plemieniu, dlatego polowanie zawsze odbywa się z umiarem i szacunkiem. Po każdym udanym łowie odprawiany jest rytuał pożegnania, który ma zapewnić, że dusza zwierzęcia bezpiecznie opuści świat żywych i powróci do kręgu natury. Wraz z rozwojem Stanów Zjednoczonych nasz świat zaczął się rozpadać. Linie kolejowe, osady białych ludzi i niepohamowana chciwość sprawiły, że Czerenowie zostali zepchnięci na margines istnienia. Nasze tereny łowieckie zostały odebrane, święte miejsca zbezczeszczone, a całe wioski zniszczone.Dziś, w roku 1900, po dawnym plemieniu pozostały jedynie dwie wioski  ostatnie bastiony naszej kultury i tradycji. Ich istnienie jest kruche, a każdy dzień to walka o przetrwanie. Zmuszeni sytuacją, polujemy na zwierzęta, by wykarmić nasze rodziny i utrzymać przy życiu resztki plemienia.Największą raną dla Czerenów jest jednak to, jak przybysze traktują naturę. Zwierzęta są masowo zabijane dla pieniędzy, bez szacunku, bez umiaru i bez jakichkolwiek konsekwencji. Dla obcych są one jedynie towarem  dla nas są życiem.Początkowo próbowaliśmy negocjować. Starszyzna wielokrotnie podejmowała rozmowy z osadnikami i myśliwymi, prosząc o zachowanie równowagi i szacunek wobec ziemi. Nasze słowa zostały jednak zignorowane, a dane obietnice nigdy nie zostały spełnione.Po tych nieudanych próbach Czerenowie sięgnęli po inne środki. Zaczęliśmy stosować taktyki partyzanckie, działając w cieniu lasów i gór. Okradamy myśliwych z broni, amunicji oraz zdobytych łupów, by ograniczyć bezmyślne zabijanie i bronić świętych ziem plemienia.Dla świata zewnętrznego jesteśmy bandytami. Dla siebie samych  strażnikami równowagi, którą inni dawno utracili.</p>
+      </article>
+    
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL AKT / INFORMACJI -->
+  <div class="modal" id="fileModal" aria-hidden="true">
+    <div class="simple-file">
+      <button class="modal-close" data-close>×</button>
+      <div class="file-stamp">OFFICIAL FRONTIER ARCHIVE</div>
+      <span class="eyebrow">CLASSIFIED FILE</span>
+      <h2 id="fileTitle">CASE FILE</h2>
+      <p id="fileText"></p>
+      <a class="gold-btn" href="#works" data-close>WRÓĆ DO ARCHIWUM</a>
+    </div>
+  </div>
+
+  <button class="floating-rules" id="openRules">📜 <span>REGULAMIN</span></button>
+  <audio id="doorSound" src="saloon_doors.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="western.mp3" preload="auto" loop></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
