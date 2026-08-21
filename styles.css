@@ -154,3 +154,93 @@ footer{min-height:95px;padding:25px 6vw;background:#080605;border-top:1px solid 
   .season-ribbon h2{font-size:21px}
   .brand:after{display:none}
 }
+
+/* ===== FINAL FIX: NAV EMBLEM + WAX SEAL CONTAINMENT ===== */
+.brand-seal{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:hidden !important;
+  display:grid !important;
+  place-items:center !important;
+  border:1px solid #b58b50;
+  border-radius:50%;
+  box-sizing:border-box;
+  background:
+    radial-gradient(circle at 35% 30%,rgba(206,164,91,.14),transparent 45%),
+    rgba(10,7,5,.7);
+}
+.brand-mark{
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  border:1px solid #80613b;
+  border-radius:50%;
+  color:#c9a66b;
+  font:700 11px/1 var(--display);
+  letter-spacing:1px;
+}
+.brand-copy{min-width:150px}
+.brand b{white-space:nowrap}
+.brand em{white-space:nowrap}
+
+/* The actual supplied wax stamp belongs on documents, never in the navigation. */
+.document-wax{
+  position:absolute !important;
+  width:92px !important;
+  height:92px !important;
+  max-width:92px !important;
+  max-height:92px !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  object-fit:contain !important;
+  pointer-events:none !important;
+  z-index:3;
+}
+
+/* Hidden modals must not render any document artwork at all. */
+.modal:not(.open),
+.modal[aria-hidden="true"]{
+  display:none !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+.modal.open{
+  visibility:visible;
+  pointer-events:auto;
+}
+
+/* Keep the Season II hero logo clean and behind the document UI. */
+.hero-title{position:relative;z-index:2}
+.hero-logo{
+  position:relative !important;
+  z-index:1 !important;
+  width:min(560px,78%) !important;
+  height:auto !important;
+  max-width:560px !important;
+  max-height:300px !important;
+  object-fit:contain !important;
+}
+.season-ribbon img{
+  width:210px !important;
+  height:150px !important;
+  max-width:210px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:800px){
+  .brand-seal{
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+    flex-basis:36px !important;
+  }
+  .brand-mark{
+    width:25px;
+    height:25px;
+    font-size:9px;
+  }
+  .brand-copy{min-width:120px}
+}
