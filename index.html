@@ -25,9 +25,8 @@
       <a href="#world">ŚWIAT</a>
       <a href="#factions">FRAKCJE</a>
       <a href="#works">PRACE</a>
-      <a href="#crime">CRIME</a>
-      <a href="#news">AKTUALNOŚCI</a>
-    </nav>
+      <a href="#crime-section">CRIME</a>
+      <a href="#news">AKTUALNOŚCI</a></nav>
     <a class="nav-cta" href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DOŁĄCZ</a>
   </header>
 
@@ -43,7 +42,7 @@
         </aside>
 
         <div class="hero-title">
-          <span class="est">EST. 1900 · FRONTIER STATE · SEASON 2</span>
+          <span class="est">EST. 2025 · FRONTIER STATE · SEASON 2</span>
           <img src="logo-season2.png" alt="FrontierLife Roleplay Season 2" class="hero-logo">
           <p>POGRANICZE PEŁNE NIEBEZPIECZEŃSTW,<br>HISTORIA NALEŻY DO CIEBIE.</p>
           <div class="hero-actions">
@@ -60,17 +59,7 @@
           <a href="#news" class="mini-link">ZOBACZ WSZYSTKIE →</a>
         </aside>
       </div>
-
-      <div class="hero-newspaper">
-        <div class="newspaper-masthead">THE FRONTIER CHRONICLE <span>NO. 27</span></div>
-        <div class="newspaper-date">BLACKWATER · AUGUST 1900</div>
-        <h2>NOWA ERA NA POGRANICZU</h2>
-        <div class="newspaper-grid">
-          <div class="fake-photo"></div>
-          <p>Na pograniczu znów zaczyna wrzeć. Nowe interesy, nowe twarze i stare konflikty tworzą historie, które zostaną z mieszkańcami na długo.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section id="archive" class="section dark-section">
       <div class="section-heading">
@@ -100,7 +89,7 @@
         <div class="archive-cover">
           <span>FRONTIERLIFE</span>
           <strong>ROLEPLAY<br>SEASON II</strong>
-          <small>THE FRONTIER ARCHIVES · 1900</small>
+          <small>THE FRONTIER ARCHIVES · 1905</small>
           <div class="cover-seal">FL</div>
         </div>
         <div class="archive-copy">
@@ -108,7 +97,7 @@
           <h3>Twoja historia zaczyna się tutaj.</h3>
           <p>Dołącz do społeczności, wybierz drogę swojej postaci i buduj swoją pozycję w świecie, w którym prawo, biznes i przestępczość spotykają się na jednej granicy.</p>
           <div class="stats-row">
-            <div><b>1900</b><span>ROK AKCJI</span></div>
+            <div><b>1905</b><span>ROK AKCJI</span></div>
             <div><b>RP</b><span>PEŁNA IMMERSJA</span></div>
             <div><b>∞</b><span>HISTORII DO ODEGRANIA</span></div>
           </div>
@@ -121,44 +110,49 @@
       <div class="section-heading light">
         <span>02 · THE FRONTIER</span>
         <h2>Mapa pogranicza</h2>
-        <p>Mapa świata FrontierLife połączona bezpośrednio z aktami lore. Kliknij miasto, aby otworzyć jego historię.</p>
+        <p>Mapa świata FrontierLife połączona bezpośrednio z aktami lore. <span class="inline-cta">Kliknij</span> miasto, aby otworzyć jego historię.</p>
       </div>
 
       <div class="map-tools">
         <div class="map-tools-title">
           <span class="map-tools-label">FRONTIER CARTOGRAPHIC ARCHIVE</span>
-          <strong id="mapYearLabel">1900</strong>
+          <strong id="mapYearLabel">1905</strong>
         </div>
         <div class="map-tools-actions">
-          <button class="map-tool active" type="button">MAPA LORE</button>
-          <button class="map-tool" type="button" data-open-map="rdr2">MAPA RDR2</button>
+          <button class="map-tool active" type="button" data-map-view="guarma">MAPA GUARMA</button>
+          <button class="map-tool" type="button" data-map-view="rdr2">MAPA RDR2</button>
         </div>
       </div>
 
       <div class="lore-year-control" aria-label="Wybór roku lore">
         <div class="year-control-head">
           <span>FRONTIER CHRONICLE · OŚ CZASU</span>
-          <strong>ROK <b id="loreYearDisplay">1900</b></strong>
+          <strong>ROK <b id="loreYearDisplay">1905</b></strong>
         </div>
-        <input id="loreYearSlider" type="range" min="1900" max="1905" step="1" value="1900" list="loreYears">
+        <input id="loreYearSlider" type="range" min="1900" max="1905" step="1" value="1905" list="loreYears">
         <datalist id="loreYears">
           <option value="1900"></option><option value="1901"></option><option value="1902"></option>
           <option value="1903"></option><option value="1904"></option><option value="1905"></option>
         </datalist>
         <div class="year-marks">
-          <button type="button" class="year-mark active" data-year="1900">1900</button>
+          <button type="button" class="year-mark" data-year="1900">1900</button>
           <button type="button" class="year-mark" data-year="1901">1901</button>
           <button type="button" class="year-mark" data-year="1902">1902</button>
           <button type="button" class="year-mark" data-year="1903">1903</button>
           <button type="button" class="year-mark" data-year="1904">1904</button>
-          <button type="button" class="year-mark" data-year="1905">1905</button>
+          <button type="button" class="year-mark active" data-year="1905">1905</button>
         </div>
-        <p id="loreYearStatus">AKTA OTWARTE · PIERWSZY ROK ARCHIWUM SEZONU II</p>
+        <p id="loreYearStatus">AKTA OTWARTE · 1905</p>
       </div>
 
-      <div class="map-board">
-        <img class="frontier-map-art" src="rdr2-world-clean.jpg" alt="Mapa świata Red Dead Redemption II" draggable="false">
-<button class="map-pin p0" data-city-name="ARMADILLO" data-city="0" title="Armadillo — otwórz akta lore"><i></i><span>ARMADILLO</span></button>
+      <div class="map-board" data-map-view="guarma">
+        <div class="map-zoom-layer" id="frontierMapZoomLayer">
+        <img class="frontier-map-art guarma-map-art" src="guarma-map.png" alt="Mapa Guarmy" draggable="false">
+        <img class="frontier-map-art rdr2-map-art" src="rdr2-world-clean.jpg" alt="Mapa świata Red Dead Redemption II" draggable="false">
+        <button class="guarma-pin gp-cinco" type="button" data-guarma-location="CINCO TORRES" data-journal-entry="0" title="Cinco Torres — otwórz dziennik"><i></i><span>CINCO TORRES</span></button>
+        <button class="guarma-pin gp-aguas" type="button" data-guarma-location="AGUASDULCES" data-journal-entry="3" title="Aguasdulces — otwórz dziennik"><i></i><span>AGUASDULCES</span></button>
+        <button class="guarma-pin gp-port" type="button" data-guarma-location="PORT" data-journal-entry="1" title="Port — otwórz dziennik"><i></i><span>PORT</span></button>
+        <button class="map-pin p0" data-city-name="ARMADILLO" data-city="0" title="Armadillo — otwórz akta lore"><i></i><span>ARMADILLO</span></button>
         <button class="map-pin p1" data-city-name="BLACKWATER" data-city="1" title="Blackwater — otwórz akta lore"><i></i><span>BLACKWATER</span></button>
         <button class="map-pin p2" data-city-name="COLTER" data-city="2" title="Colter — otwórz akta lore"><i></i><span>COLTER</span></button>
         <button class="map-pin p3" data-city-name="STRAWBERRY" data-city="3" title="Strawberry — otwórz akta lore"><i></i><span>STRAWBERRY</span></button>
@@ -170,18 +164,52 @@
         <button class="map-pin p9" data-city-name="VAN HORN" data-city="9" title="Van Horn — otwórz akta lore"><i></i><span>VAN HORN</span></button>
         <button class="map-pin p10" data-city-name="INDIANIE" data-city="10" title="Indianie — otwórz akta lore"><i></i><span>INDIANIE</span></button>
 
-        <div class="map-coordinates">FRONTIERLIFE · TERRITORIAL ARCHIVE · <span id="mapYearFooter">1900</span></div>
-      </div>
-
-      <div class="lore-map-note">
-        <div>
-          <span>LORE CONNECTION</span>
-          <strong>Każdy punkt na mapie prowadzi do właściwego aktu.</strong>
         </div>
-        <p>Mapa pokazuje miejsca, o których mowa w historii FrontierLife. Lista aktów poniżej jest zsynchronizowana z punktami na mapie.</p>
+        <div class="map-zoom-controls" aria-label="Sterowanie mapą">
+          <button type="button" class="map-zoom-btn" id="mapZoomOut" aria-label="Oddal mapę">−</button>
+          <button type="button" class="map-zoom-btn map-zoom-reset" id="mapZoomReset" aria-label="Resetuj mapę">100%</button>
+          <button type="button" class="map-zoom-btn" id="mapZoomIn" aria-label="Przybliż mapę">+</button>
+        </div>
+        <div class="map-zoom-hint">KÓŁKO MYSZY · PRZYBLIŻ / ODDAL</div>
+        <div class="map-coordinates">FRONTIERLIFE · TERRITORIAL ARCHIVE · <span id="mapYearFooter">1905</span></div>
       </div>
 
-      <div class="lore-grid">
+      <div class="lore-map-note" id="mapContextNote">
+        <div>
+          <span id="mapContextEyebrow">GUARMA · LORE CONNECTION</span>
+          <strong id="mapContextTitle">Każdy punkt prowadzi do właściwego fragmentu historii.</strong>
+        </div>
+        <p id="mapContextText">Mapa Guarmy pokazuje miejsca związane z dziennikiem i historią sezonu II.</p>
+      </div>
+
+      <div class="frontier-chronicle-panel" id="frontierChroniclePanel">
+        <div class="chronicle-panel-head">
+          <div>
+            <span>FRONTIER CHRONICLE · AKTA ROCZNIKA</span>
+            <h3>Rok <strong id="chronicleYear">1905</strong></h3>
+          </div>
+          <div class="chronicle-status" id="chronicleStatus">AKTA OTWARTE</div>
+        </div>
+        <div class="chronicle-body">
+          <div class="chronicle-stamp">
+            <span>ARCHIVE</span>
+            <strong id="chronicleStampYear">1905</strong>
+          </div>
+          <div class="chronicle-copy">
+            <h4 id="chronicleTitle">FRONTIER STATE · 1905</h4>
+            <p id="chronicleText">Bieżący rok sezonu II. To tutaj trafiają wydarzenia, które zmieniają sytuację na pograniczu — nowe osoby, konflikty, interesy i konsekwencje działań mieszkańców.</p>
+            <div class="chronicle-meta">
+              <span><b id="chroniclePrimaryCount">0</b> <span id="chroniclePrimaryLabel">AKTÓW MIAST</span></span>
+              <span><b id="chronicleYearIndex">06</b> ROCZNIK</span>
+              <span><b id="chronicleJournalCount">0</b> <span id="chronicleJournalLabel">WPISÓW DZIENNIKA</span></span>
+              <span id="chronicleSourceLabel">FRONTIERLIFE · SEASON II</span>
+            </div>
+            <button class="chronicle-journal-open" type="button" data-open-journal>OTWÓRZ DZIENNIK GUARMy →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="lore-grid" id="mapLoreGrid">
         <button class="lore-card" data-city="0"><span class="lore-card-index">01</span><span><strong>ARMADILLO</strong><small>OPEN CITY FILE</small></span><span class="lore-arrow">→</span></button>
         <button class="lore-card" data-city="1"><span class="lore-card-index">02</span><span><strong>BLACKWATER</strong><small>OPEN CITY FILE</small></span><span class="lore-arrow">→</span></button>
         <button class="lore-card" data-city="2"><span class="lore-card-index">03</span><span><strong>COLTER</strong><small>OPEN CITY FILE</small></span><span class="lore-arrow">→</span></button>
@@ -232,36 +260,36 @@
         <h3>Droga do bycia szeryfem</h3>
         <div class="archive-body">
           1. Aby dołączyć w struktury LEA (sheriff,marshall) należy kliknąć w poniższy link (discord sheriff office)
-<a class="link" href="https://discord.gg/YA38BaC3XT" style="font-size: 22px" target="_blank">- kliknij! -</a>
+<a class="link" href="https://discord.gg/YA38BaC3XT" target="_blank">- <span class="inline-cta">kliknij!</span> -</a>
           2. Po dołączeniu znaleźć kategorię "PODANIA" i utworzyć ticket.
           3. Dalej postępować według wzoru.
       </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
-        <div class="archive-card-top"><span>FRakcje</span><b>02</b></div>
+        <div class="archive-card-top"><span>FRAKCJE</span><b>02</b></div>
         <h3>Droga do bycia medykiem</h3>
         <div class="archive-body">
           1. Aby dołączyć w struktury TMS należy kliknąć w poniższy link (discord Territorial Medical Service)
-<a class="link" href="https://discord.gg/4ntdVmMmJY" style="font-size: 22px" target="_blank">- kliknij! -</a>
+<a class="link" href="https://discord.gg/4ntdVmMmJY" target="_blank">- <span class="inline-cta">kliknij!</span> -</a>
           2. Po dołączeniu znaleźć kategorię "📝-podania-do-frakcji" i utworzyć ticket.
           3. Dalej postępować według wzoru.
 
       </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
-        <div class="archive-card-top"><span>FRakcje</span><b>03</b></div>
+        <div class="archive-card-top"><span>FRAKCJE</span><b>03</b></div>
         <h3>Droga do bycia członkiem Armii</h3>
         <div class="archive-body">
           1. Aby dołączyć w struktury 3rd Cavalery Regiment, należy kliknąć w poniższy link (discord wojska)
-<a class="link" href="https://discord.gg/j8YbUYZaa5" style="font-size: 22px" target="_blank">- kliknij! -</a>
+<a class="link" href="https://discord.gg/j8YbUYZaa5" target="_blank">- <span class="inline-cta">kliknij!</span> -</a>
           2. Po dołączeniu znaleźć kategorię "KONTAKT" i utworzyć ticket.
           3. Dalej postępować według wzoru.
       </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -279,9 +307,9 @@
           1. Rusznikarz produkuje bronie, modyfikuje je dla graczy.
           2. Gracz przychodzi do nas, zamawia broń, a my ją produkujemy lub modyfkujemy.
           3. Aby rusznikarz wogóle miał możliwość produkcji broni potrzebne są materiały, które trzeba zamawiać u mieszkańców którzy zajmują się Górnictwem lub pozyskiwaniem drzewa z pobliskich lasów.
-<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" target="_blank">- <span class="inline-cta">Stwórz podanie! (klik)</span> -</a>
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -298,9 +326,9 @@
 
           1. Stajenny zajmuje się końmi oraz ich rozmnażaniem. 
           2. Trenuje je dla graczy i sprzedaje przedmioty dla koni.
-<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" target="_blank">- <span class="inline-cta">Stwórz podanie! (klik)</span> -</a>
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -316,9 +344,9 @@
           ✧ Czym zajmuję się hodowca? ✧
           1. Prowadzi ranczo, dba o porządek, zajmuje się zwierzętami które może zakupić u sprzedawcy bydła w miastach.
           2. Ranczer zaopatruje Saloony w mięso, jajka, mleko oraz skóry ze zwierząt dla graczy.
-<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" target="_blank">- <span class="inline-cta">Stwórz podanie! (klik)</span> -</a>
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -334,9 +362,9 @@
           ✧ Co robi kolejarz? ✧
 
           1. Kolejarz zajmuje się obsługą pociągów, które przewożą pasażerów lub towary, realizując transport na długich trasach dla osób prywatnych oraz firm.
-<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" target="_blank">- <span class="inline-cta">Stwórz podanie! (klik)</span> -</a>
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -356,7 +384,7 @@
           1. Bardzo proste - uprawia role, sprzedaje plony dla zwykłych mieszkańców lub firm zajmujących się produkcją żywności.
           2. Farmer może także uprawiać różne zioła które może sprzedać u zielarza lub wykorzystać je do produkcji toników.
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -374,7 +402,7 @@
           4. Ryby sprzedajemy w tym samym miejscu co zakup wędek oraz przynęt.
           5. Rybak może pozyskiwać filety z ryb, które może sprzedawać w miastowych saloonach. (Potrzebny jest nóż do filetowania).
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -387,7 +415,7 @@
           2. Na mapie pojawiają się różnej maści ziół oraz roślin, od zwykłej marchwi do róznych składników "alchemicznych".
           3. Zioła sprzedajemy u pobliskiego Zielarza lub też dla graczy którzy umieją wykorzystać je w jakiś sposób (produkcja toników, produkcja żywności).
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -400,7 +428,7 @@
           2. Łowca pozyskuje mięso, skóry oraz inne przedmioty ze zwierząt.
           3. Skóry oraz zwierzęta oskórowane sprzedajemy u pobliskiego rzeżnika, pozyskane z niego mięso możemy wykorzystać do produkcji jedzenia lub też możemy je sprzedać w saloonach dla większego zarobku.
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -414,9 +442,9 @@
           3. Górnik może także sprzedać te materiały u lokalnego górnika dla szybkiego zarobku.
           
           ✧ Jest także możliwość prowadzenia swojej własnej działalności kopalnianej. (potrzebne jest napisanie PODANIA).
-<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" style="font-size: 30px" target="_blank">- Stwórz podanie! (klik) -</a>
+<a class="link" href="https://forms.gle/KqsAr3M8QmeQernq9" target="_blank">- <span class="inline-cta">Stwórz podanie! (klik)</span> -</a>
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       <article class="archive-card">
@@ -430,33 +458,154 @@
           5. Po zweryfikowaniu się zobaczysz kanał "podanie-o-bandę" a na nim link do podania.
           6. Dalej postępuj zgodnie z formularzem.
 </div>
-        <button class="paper-link" data-expand>OPEN FILE <span>↗</span></button>
+        <button class="paper-link" data-expand>OTWÓRZ AKTA <span>↗</span></button>
       </article>
     
       </div>
     </section>
 
-    <section id="news" class="section newspaper-section">
-      <div class="newspaper-page">
-        <div class="paper-top"><span>THE FRONTIER CHRONICLE</span><b>VOL. I</b><span>BLACKWATER · AUGUST 1900</span><b>NO. 27</b></div>
-        <h2>WIELKIE ZMIANY NA FRONTIERLIFE</h2>
-        <div class="paper-columns">
-          <div class="paper-main">
-            <div class="news-image"></div>
-            <h3>System reputacji nadchodzi na pogranicze</h3>
-            <p>Każda decyzja ma znaczenie. W świecie FrontierLife reputacja może otworzyć drzwi, zbudować zaufanie albo sprawić, że ktoś zacznie cię szukać.</p>
-            <p class="dropcap">Ostatnie tygodnie przyniosły wiele zmian. Nowe prawo, nowe możliwości oraz nadchodzące wydarzenia będą kształtować kolejne rozdziały historii mieszkańców.</p>
-            <button class="gold-btn" data-toast="Pełne archiwum aktualności będzie dostępne w kolejnym wydaniu.">CZYTAJ WIĘCEJ</button>
-          </div>
-          <aside class="paper-side">
-            <h4>INNE ARTYKUŁY</h4>
-            <div><b>01</b><span>Nowa mapa świata</span></div>
-            <div><b>02</b><span>Event: Poszukiwania</span></div>
-            <div><b>03</b><span>Poradnik dla nowych</span></div>
-          </aside>
-        </div>
+    <section id="crime-section" class="crime-section">
+  <div class="section-kicker">FRONTIERLIFE · CRIME ARCHIVE</div>
+  <h2>PODZIEMIE</h2>
+  <p class="crime-intro">
+    Nie każdy mieszkaniec Frontier State żyje zgodnie z prawem. Ten dział opisuje
+    nielegalne ścieżki rozgrywki, organizacje przestępcze i ryzykowne interesy,
+    które mogą stać się częścią historii postaci.
+  </p>
+
+  <div class="crime-grid">
+    <article class="crime-card">
+      <span class="crime-number">01</span>
+      
+      <p>
+        Załóż własną organizację przestępczą, nadaj jej nazwę, określ hierarchię,
+        teren wpływów i zasady działania. Banda powinna mieć własną historię
+        oraz wyraźny motyw fabularny.
+      </p>
+      <div class="crime-meta">BANDA · HIERARCHIA · TEREN WPŁYWÓW</div>
+    </article>
+
+    <article class="crime-card">
+      <span class="crime-number">02</span>
+      <h3>Zbieranie nielegalnych towarów</h3>
+      <p>
+        Nielegalne surowce i narkotyki mogą być elementem rozgrywki przestępczej.
+        Ich pozyskiwanie, transport i handel powinny wynikać z prowadzonej fabuły
+        i wiązać się z ryzykiem wykrycia.
+      </p>
+      <div class="crime-meta">TOWAR · TRANSPORT · HANDEL</div>
+    </article>
+
+    <article class="crime-card">
+      <span class="crime-number">03</span>
+      <h3>Produkcja bimbru</h3>
+      <p>
+        Prowadzenie nielegalnej gorzelni, organizowanie dostaw i sprzedaż alkoholu
+        to jedna z dróg rozwoju podziemia. Interes może być prowadzony samotnie
+        albo jako część większej organizacji.
+      </p>
+      <div class="crime-meta">GORZELNIA · DOSTAWY · DYSTRYBUCJA</div>
+    </article>
+
+    <article class="crime-card">
+      <span class="crime-number">04</span>
+      <h3>Napady i skoki</h3>
+      <p>
+        Napady na banki, pociągi, dyliżanse oraz konwoje mogą tworzyć większe
+        wątki fabularne. Przygotowanie, podział ról i konsekwencje powinny być
+        częścią historii.
+      </p>
+      <div class="crime-meta">PLAN · EKIPA · KONSEKWENCJE</div>
+    </article>
+
+    <article class="crime-card">
+      <span class="crime-number">05</span>
+      <h3>Fałszywe dokumenty i dowody</h3>
+      <p>
+        Podziemie może wykorzystywać fałszywe dokumenty, zmienione akta oraz
+        spreparowane dowody jako element fabuły. Każda taka akcja powinna mieć
+        logiczne uzasadnienie w świecie gry.
+      </p>
+      <div class="crime-meta">DOKUMENTY · AKTA · TOŻSAMOŚĆ</div>
+    </article>
+
+    <article class="crime-card">
+      <span class="crime-number">06</span>
+      <h3>Korupcja i wpływy</h3>
+      <p>
+        Przestępcze organizacje mogą próbować zdobywać wpływy poprzez łapówki,
+        szantaż lub zależności między postaciami. Wątek powinien rozwijać się
+        fabularnie i pozostawiać ślady możliwe do odkrycia przez inne strony.
+      </p>
+      <div class="crime-meta">WPŁYWY · ŁAPÓWKI · SZANTAŻ</div>
+    </article>
+  </div>
+
+  <div class="crime-note">
+    <strong>AKTA PODZIEMIA</strong>
+    <span>
+      Wszystkie aktywności przestępcze są elementem fikcyjnej rozgrywki RP.
+      Ich przebieg, dostępność i konsekwencje zależą od zasad serwera oraz decyzji administracji.
+    </span>
+  </div>
+</section>
+
+<section id="news" class="section newspaper-section">
+  <div class="news-library">
+    <div class="section-heading">
+      <span>06 · FRONTIER PRESS</span>
+      <h2>Aktualności</h2>
+      <p>Przeglądaj wydania prasy z Frontier State. Najpierw wybierz gazetę, a następnie przewracaj jej strony jak prawdziwy egzemplarz.</p>
+    </div>
+
+    <div class="edition-switcher">
+      <button class="edition-arrow" id="editionPrev" aria-label="Poprzednia gazeta">←</button>
+
+      <div class="edition-track" id="editionTrack" aria-live="polite"></div>
+
+      <button class="edition-arrow" id="editionNext" aria-label="Następna gazeta">→</button>
+    </div>
+
+    <div class="edition-dots" id="editionDots" aria-label="Wydania gazet"></div>
+  </div>
+</section>
+
+
+<div class="newspaper-reader" id="newspaperReader" aria-hidden="true">
+  <div class="reader-backdrop" data-close-reader></div>
+
+  <div class="reader-window">
+    <button class="reader-close" data-close-reader aria-label="Zamknij">×</button>
+
+    <div class="reader-head">
+      <div>
+        <span>FRONTIER PRESS · ARCHIVE</span>
+        <strong id="readerEditionTitle">THE FRONTIER CHRONICLE</strong>
+        <small id="readerEditionMeta">BLACKWATER · AUGUST 1905</small>
       </div>
-    </section>
+      <div class="reader-page-count" id="readerPageCount">STRONY 01–02 / 04</div>
+    </div>
+
+    <div class="newspaper-stage">
+      <button class="book-nav book-prev" id="readerPrev" aria-label="Poprzednie strony">‹</button>
+
+      <div class="newspaper-book" id="bookSheet">
+        <div class="paper-page" id="readerPageLeft"></div>
+        <div class="paper-spine"></div>
+        <div class="paper-page" id="readerPageRight"></div>
+      </div>
+
+      <button class="book-nav book-next" id="readerNext" aria-label="Następne strony">›</button>
+    </div>
+
+    <div class="reader-footer">
+      <span>← → · PRZEWRACAJ KARTKI</span>
+      <div class="reader-progress"><i id="readerProgress"></i></div>
+      <button class="reader-close-bottom" data-close-reader>ZAMKNIJ GAZETĘ</button>
+    </div>
+  </div>
+</div>
+
 
     <section class="section cta-section">
       <div class="cta-card">
@@ -481,13 +630,16 @@
 
   </main>
 
-  <footer>
-    <div><b>✦ FRONTIERLIFE</b><span>ROLEPLAY · 1900</span></div>
+  
+
+
+<footer>
+    <div><b>✦ FRONTIERLIFE</b><span>ROLEPLAY · 2025</span></div>
     <a href="#archive">JAK ZACZĄĆ</a>
     <a href="https://discord.gg/bXz6gUeYFq" target="_blank" rel="noopener">DISCORD</a>
     <a href="https://frontierlife-roleplay.tebex.io/" target="_blank" rel="noopener">SKLEP</a>
     <a href="https://www.tiktok.com/@frontierliferoleplay" target="_blank" rel="noopener">TIKTOK</a>
-    <span>DESIGNED BY BIALY</span>
+    <span>DESIGNED BY _NO_HASHTAG_</span>
   </footer>
 
   <!-- REGULAMIN / KSIĘGA -->
@@ -495,7 +647,11 @@
     <div class="book-shell">
       <button class="modal-close" data-close>×</button>
       <aside class="book-index">
-        <div class="book-brand">FRONTIERLIFE<br><small>ROLEPLAY</small></div>
+        <div class="book-brand">
+        <span class="brand-name">FRONTIERLIFE</span>
+        <span class="brand-season">SEZON II</span>
+        <span class="brand-roleplay">ROLEPLAY</span>
+    </div>
         <div class="book-title">REGULAMIN</div>
         <span class="index-label">SPIS TREŚCI</span>
         <div class="rule-tabs">
@@ -814,6 +970,39 @@
   </div>
 
 
+  <!-- DZIENNIK GUARMy -->
+  <div class="modal journal-modal" id="guarmaJournalModal" aria-hidden="true">
+    <div class="journal-shell">
+      <button class="modal-close" data-close>×</button>
+      <div class="journal-cover">
+        <span>FRONTIERLIFE · SEASON II</span>
+        <h2>PAMIĘTNIK NIEZNANEGO<br>MIESZKAŃCA GUARMY</h2>
+        <p>Zapis znaleziony po wydarzeniach, które zmieniły wyspę.</p>
+        <div class="journal-cover-stamp">GUARMA · ARCHIVE</div>
+      </div>
+      <div class="journal-book">
+        <aside class="journal-index">
+          <div class="journal-index-title">SPIS WPISÓW</div>
+          <div id="journalIndexEntries"></div>
+        </aside>
+        <article class="journal-page">
+          <div class="journal-page-head">
+            <span id="journalEntryDate">17 LISTOPADA 1900</span>
+            <span id="journalEntryNo">01 / 20</span>
+          </div>
+          <h3 id="journalEntryTitle">NOWY POCZĄTEK</h3>
+          <div class="journal-entry-note" id="journalEntryNote"></div>
+          <div class="journal-entry-text" id="journalEntryText"></div>
+          <div class="journal-page-foot">
+            <button type="button" id="journalPrev">← POPRZEDNI WPIS</button>
+            <span>THE FRONTIER ARCHIVE</span>
+            <button type="button" id="journalNext">NASTĘPNY WPIS →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
   <!-- POWIĘKSZ MAPĘ RDR2 -->
   <div class="modal map-viewer-modal" id="rdr2MapModal" aria-hidden="true">
     <div class="map-viewer-shell">
@@ -833,7 +1022,49 @@
   <div class="modal" id="cityModal" aria-hidden="true">
     <div class="city-shell">
       <button class="modal-close" data-close>×</button>
-      <div class="city-year-ribbon">ARCHIVE YEAR <strong id="cityYearRibbon">1900</strong></div>
+      <div class="city-year-ribbon">FRONTIER ARCHIVE · ROCZNIK <strong id="cityYearRibbon">1905</strong></div>
+
+      <div class="city-dossier">
+        <div class="dossier-head">
+          <div>
+            <span class="dossier-eyebrow">FRONTIER STATE · CARTOGRAPHIC DOSSIER</span>
+            <h2 id="dossierTitle">BLACKWATER</h2>
+            <div class="dossier-case" id="dossierCase">CASE FILE · 02</div>
+          </div>
+          <div class="dossier-head-meta">
+            <span id="dossierStatus">AKTA OTWARTE · 1905</span>
+            <strong id="dossierYear">1905</strong>
+          </div>
+        </div>
+
+        <div class="dossier-rule"></div>
+
+        <div class="dossier-main">
+          <div class="dossier-seal">
+            <img src="wax-seal.png" alt="FrontierLife seal">
+            <span>FRONTIER<br>ARCHIVE</span>
+          </div>
+
+          <div class="dossier-copy">
+            <div class="dossier-label">AKT · OPIS TERYTORIUM</div>
+            <p id="dossierText"></p>
+
+            <div class="dossier-label dossier-label-spaced">WĄTKI POWIĄZANE</div>
+            <div class="dossier-themes" id="dossierThemes"></div>
+          </div>
+        </div>
+
+        <div class="dossier-footer">
+          <span id="dossierSource">ŹRÓDŁO · PIERWOTNY LORE FRONTIERLIFE</span>
+          <span id="dossierIndex">02 / 11</span>
+        </div>
+
+        <div class="dossier-nav">
+          <button id="dossierPrev" type="button">← POPRZEDNIE AKTA</button>
+          <button id="dossierNext" type="button">NASTĘPNE AKTA →</button>
+        </div>
+      </div>
+
       <div class="city-doc">
         
       <article class="city-file" data-city-file="0">
@@ -958,7 +1189,8 @@ Armadillo jeszcze nie dawno niemal przestało istnieć. Straszliwa epidemia pust
   <button class="floating-rules" id="openRules">📜 <span>REGULAMIN</span></button>
   <audio id="doorSound" src="saloon_doors.mp3" preload="auto"></audio>
   <audio id="bgMusic" src="western.mp3" preload="auto" loop></audio>
-
+  <script src="newspapers.js"></script>
   <script src="app.js"></script>
+  <script src="newspaper-clean.js"></script>
 </body>
 </html>
