@@ -6064,3 +6064,268 @@ a:hover .inline-cta{
     letter-spacing: 1.2px;
   }
 }
+
+
+/* V28 — naprawione logo w księdze regulaminu */
+#rulesModal .book-index .book-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+  width: 100%;
+  gap: 0 !important;
+  margin: 0 auto 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+#rulesModal .book-index .book-brand .brand-name {
+  display: block !important;
+  order: 1 !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(20px, 1.5vw, 27px) !important;
+  font-weight: 700 !important;
+  letter-spacing: .5px !important;
+  line-height: 1.08 !important;
+  white-space: nowrap;
+}
+#rulesModal .book-index .book-brand .brand-roleplay {
+  display: block !important;
+  order: 2 !important;
+  width: 100%;
+  margin: 4px 0 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 10px !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  line-height: 1.1 !important;
+}
+#rulesModal .book-index .book-brand .brand-season {
+  display: block !important;
+  order: 3 !important;
+  width: 100%;
+  margin: 6px 0 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 8px !important;
+  font-weight: 400 !important;
+  letter-spacing: 2.8px !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+/* Responsive scaling — larger viewports should use their available space */
+@media (min-width: 1600px) {
+  .hero {
+    min-height: 100svh;
+    padding: clamp(120px, 8vh, 180px) 4vw clamp(70px, 6vh, 120px);
+    background-size: 130% auto;
+  }
+  .hero-inner {
+    width: 92vw;
+    max-width: 2200px;
+    grid-template-columns: clamp(260px, 18vw, 390px) minmax(0, 1fr) clamp(300px, 21vw, 440px);
+    gap: clamp(36px, 3vw, 76px);
+  }
+  .status-card,
+  .news-rail {
+    padding: clamp(22px, 1.55vw, 38px);
+  }
+  .eyebrow {
+    font-size: clamp(10px, .62vw, 14px);
+    letter-spacing: clamp(2px, .15vw, 3px);
+  }
+  .status-card strong {
+    font-size: clamp(25px, 1.55vw, 36px);
+  }
+  .status-card small,
+  .news-rail p,
+  .news-rail .news-item p {
+    font-size: clamp(12px, .72vw, 16px);
+  }
+  .hero-logo {
+    width: min(680px, 82%);
+  }
+  .hero-title p {
+    font-size: clamp(15px, .92vw, 21px);
+  }
+  .hero-actions {
+    gap: clamp(22px, 1.8vw, 40px);
+  }
+  .gold-btn,
+  .outline-btn {
+    font-size: clamp(11px, .7vw, 15px);
+    padding: clamp(12px, .9vw, 19px) clamp(16px, 1.25vw, 28px);
+  }
+  .section-heading,
+  .archive-intro,
+  .map-board,
+  .lore-grid,
+  .file-grid,
+  .archive-grid,
+  .map-tools,
+  .lore-map-note,
+  .lore-year-control,
+  .frontier-chronicle-panel,
+  .news-library,
+  .crime-section {
+    max-width: min(92vw, 1800px);
+  }
+  .section-heading h2,
+  .archive-intro h2 {
+    font-size: clamp(30px, 2.1vw, 48px);
+  }
+  .lore-grid,
+  .file-grid,
+  .archive-grid {
+    gap: clamp(16px, 1.2vw, 28px);
+  }
+  .book-shell {
+    width: min(94vw, 1800px);
+    max-width: 1800px;
+    height: min(90svh, 1100px);
+    grid-template-columns: clamp(290px, 22vw, 380px) minmax(0, 1fr);
+  }
+  .book-index {
+    padding: clamp(32px, 2.4vw, 52px) clamp(20px, 1.6vw, 34px);
+  }
+  .rule-tabs button {
+    font-size: clamp(10px, .65vw, 14px);
+    padding: clamp(10px, .7vw, 16px) 10px;
+  }
+  .rule-copy {
+    font-size: clamp(14px, .85vw, 18px);
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .hero {
+    min-height: max(780px, 100svh);
+  }
+  .hero-inner {
+    width: min(94vw, 1500px);
+    grid-template-columns: minmax(210px, 240px) minmax(0, 1fr) minmax(240px, 280px);
+    gap: clamp(20px, 2.4vw, 38px);
+  }
+  .hero-logo {
+    width: min(560px, 82%);
+  }
+  .status-card,
+  .news-rail {
+    padding: clamp(16px, 1.5vw, 24px);
+  }
+  .hero-title p {
+    font-size: clamp(13px, 1vw, 16px);
+  }
+}
+
+@media (max-width: 1099px) {
+  .hero {
+    min-height: auto;
+    padding: 105px 22px 48px;
+    background-size: auto 115%;
+  }
+  .hero-inner {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 18px;
+  }
+  .hero-title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .status-card {
+    grid-column: 1;
+  }
+  .news-rail {
+    grid-column: 2;
+  }
+  .hero-logo {
+    width: min(430px, 75vw);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 92px 14px 32px;
+    background-size: auto 100%;
+  }
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .hero-title { order: 0; }
+  .status-card { order: 1; }
+  .news-rail { order: 2; }
+  .hero-logo {
+    width: min(320px, 82vw);
+    margin: 12px auto;
+  }
+  .hero-title p { font-size: 13px; }
+  .book-shell {
+    width: calc(100vw - 18px);
+    height: calc(100svh - 24px);
+    max-height: none;
+    border-width: 4px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .book-index {
+    max-height: 34svh;
+    padding: 16px 14px;
+    border-right: 0;
+    border-bottom: 1px solid #654b30;
+  }
+  #rulesModal .book-index .book-brand .brand-name {
+    font-size: 21px !important;
+  }
+  .book-title {
+    margin: 18px 0 12px;
+    font-size: 21px;
+  }
+  .rule-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+  }
+  .rule-tabs button {
+    padding: 7px 6px;
+    font-size: 9px;
+  }
+  .rule-page {
+    height: 100%;
+    padding: 28px 20px 40px;
+  }
+  .rule-page h3 {
+    font-size: clamp(22px, 6vw, 30px);
+    margin: 22px 0;
+  }
+  .rule-copy {
+    font-size: 14px !important;
+    line-height: 1.75;
+  }
+}
+
+/* Scale the content without applying browser-like zoom to the whole site. */
+@media (min-width: 1600px) {
+  .section-heading,
+  .archive-intro,
+  .lore-map-note,
+  .lore-year-control {
+    font-size: clamp(14px, .8vw, 18px);
+  }
+  .file-grid,
+  .lore-grid,
+  .archive-grid {
+    width: 92vw;
+  }
+}
