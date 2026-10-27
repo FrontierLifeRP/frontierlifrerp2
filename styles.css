@@ -6607,3 +6607,48 @@ a:hover .inline-cta{
   #rulesModal .rule-copy { font-size: 15px !important; }
   #rulesModal .book-index .book-title { font-size: 30px !important; }
 }
+
+
+/* V31 — keep the rules-book sidebar logo compact; prevent square source art
+   from dominating the full-height index column. */
+#rulesModal .book-shell .book-index {
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+}
+#rulesModal .book-shell .book-index .book-brand {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 auto 20px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+#rulesModal .book-shell .book-index img.rules-brand-logo {
+  display: block !important;
+  position: static !important;
+  width: 100% !important;
+  max-width: 178px !important;
+  height: 178px !important;
+  max-height: 178px !important;
+  min-height: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  flex: 0 0 178px !important;
+  margin: 0 auto !important;
+}
+#rulesModal .book-shell .book-index .book-title {
+  margin-top: 12px !important;
+}
+@media (max-width: 800px) {
+  #rulesModal .book-shell .book-index img.rules-brand-logo {
+    width: 132px !important;
+    max-width: 132px !important;
+    height: 132px !important;
+    max-height: 132px !important;
+    flex-basis: 132px !important;
+  }
+}
