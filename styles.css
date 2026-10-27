@@ -6551,3 +6551,59 @@ a:hover .inline-cta{
     font-size: clamp(14px, 3.7vw, 17px) !important;
   }
 }
+
+
+/* V30 — use the exact central homepage logo in the rules book and improve legibility. */
+#rulesModal .book-index .book-brand {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 112px !important;
+  margin: 0 auto 18px !important;
+  padding: 0 !important;
+}
+#rulesModal .book-index .rules-brand-logo {
+  display: block !important;
+  width: min(100%, 245px) !important;
+  height: auto !important;
+  max-height: 130px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.25));
+}
+#rulesModal .book-index .book-title {
+  font-size: clamp(32px, 2.25vw, 42px) !important;
+  line-height: 1.12 !important;
+  margin: 24px 0 30px !important;
+  letter-spacing: .8px !important;
+}
+#rulesModal .rule-copy {
+  font-size: clamp(15px, 1vw, 17px) !important;
+  line-height: 1.85 !important;
+}
+#rulesModal .rule-copy p,
+#rulesModal .rule-copy .rule-item {
+  margin-bottom: 15px !important;
+}
+#rulesModal .rule-copy .rule-number {
+  min-width: 46px !important;
+}
+#rulesModal .rule-copy li {
+  font-size: inherit !important;
+  line-height: 1.8 !important;
+  margin-bottom: 7px !important;
+}
+#rulesModal .rule-page h3 {
+  font-size: clamp(36px, 2.5vw, 44px) !important;
+  line-height: 1.18 !important;
+}
+@media (max-width: 800px) {
+  #rulesModal .book-index .rules-brand-logo {
+    width: min(100%, 190px) !important;
+    max-height: 100px !important;
+  }
+  #rulesModal .rule-copy { font-size: 15px !important; }
+  #rulesModal .book-index .book-title { font-size: 30px !important; }
+}
