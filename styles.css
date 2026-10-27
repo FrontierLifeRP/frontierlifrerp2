@@ -6329,3 +6329,225 @@ a:hover .inline-cta{
     width: 92vw;
   }
 }
+
+
+/* V29 — match the intended 125% visual density through responsive sizing.
+   Do not set browser zoom: scale the layout itself relative to the viewport. */
+@media (min-width: 801px) {
+  :root {
+    --desktop-ui: clamp(1, 0.078vw, 1.25);
+  }
+
+  .site-nav {
+    height: clamp(72px, 4.85vw, 88px) !important;
+    padding-inline: clamp(22px, 2.2vw, 42px) !important;
+    gap: clamp(18px, 2vw, 38px) !important;
+  }
+
+  .site-nav .brand {
+    min-width: clamp(220px, 18vw, 310px) !important;
+    gap: clamp(10px, .8vw, 15px) !important;
+  }
+
+  .brand-seal,
+  .brand-seal img {
+    width: clamp(42px, 3.2vw, 58px) !important;
+    height: clamp(42px, 3.2vw, 58px) !important;
+  }
+
+  .brand-seal {
+    flex-basis: clamp(42px, 3.2vw, 58px) !important;
+  }
+
+  .brand b {
+    font-size: clamp(20px, 1.35vw, 26px) !important;
+    letter-spacing: clamp(.6px, .08vw, 1.4px) !important;
+  }
+
+  .brand small {
+    font-size: clamp(8px, .55vw, 10px) !important;
+    margin-top: 4px !important;
+  }
+
+  .brand em {
+    font-size: clamp(6px, .42vw, 8px) !important;
+    margin-top: 5px !important;
+  }
+
+  .site-nav nav {
+    gap: clamp(10px, 1.25vw, 24px) !important;
+  }
+
+  .site-nav nav a,
+  .nav-rules {
+    padding: clamp(11px, .82vw, 16px) clamp(12px, 1vw, 20px) !important;
+    font-size: clamp(10px, .68vw, 13px) !important;
+    letter-spacing: clamp(.5px, .075vw, 1.4px) !important;
+  }
+
+  .nav-rules {
+    min-height: clamp(44px, 3.2vw, 58px) !important;
+    padding-inline: clamp(18px, 1.5vw, 28px) !important;
+    font-size: clamp(12px, .78vw, 15px) !important;
+  }
+
+  .hero {
+    min-height: 100svh !important;
+    padding:
+      calc(clamp(72px, 4.85vw, 88px) + clamp(90px, 7.2vw, 130px))
+      clamp(24px, 3.8vw, 72px)
+      clamp(70px, 5.8vw, 110px) !important;
+    background-size: 130% auto !important;
+    background-position: center 28% !important;
+    align-items: center !important;
+  }
+
+  .hero-inner {
+    width: min(92vw, 1880px) !important;
+    max-width: 1880px !important;
+    grid-template-columns:
+      clamp(245px, 17vw, 330px)
+      minmax(0, 1fr)
+      clamp(285px, 19vw, 360px) !important;
+    gap: clamp(28px, 3vw, 58px) !important;
+    align-items: center !important;
+  }
+
+  .status-card,
+  .news-rail {
+    padding: clamp(20px, 1.45vw, 30px) !important;
+  }
+
+  .eyebrow {
+    font-size: clamp(10px, .63vw, 13px) !important;
+    letter-spacing: clamp(1.5px, .12vw, 2.4px) !important;
+  }
+
+  .status-card strong {
+    font-size: clamp(25px, 1.55vw, 34px) !important;
+    margin: clamp(12px, .9vw, 18px) 0 4px !important;
+  }
+
+  .status-card small {
+    font-size: clamp(12px, .8vw, 16px) !important;
+  }
+
+  .outline-btn {
+    padding: clamp(12px, .95vw, 19px) !important;
+    margin-top: clamp(16px, 1.1vw, 23px) !important;
+    font-size: clamp(11px, .72vw, 14px) !important;
+  }
+
+  .hero-title .est {
+    font-size: clamp(10px, .67vw, 13px) !important;
+    letter-spacing: clamp(2px, .22vw, 4px) !important;
+  }
+
+  .hero-logo {
+    width: clamp(260px, 19vw, 350px) !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    margin: clamp(20px, 1.5vw, 30px) auto clamp(8px, .7vw, 14px) !important;
+  }
+
+  .hero-title p {
+    font-size: clamp(15px, .98vw, 19px) !important;
+    line-height: 1.65 !important;
+    max-width: 650px !important;
+  }
+
+  .hero-actions {
+    gap: clamp(18px, 1.5vw, 30px) !important;
+    margin-top: clamp(20px, 1.55vw, 32px) !important;
+    flex-wrap: wrap;
+  }
+
+  .gold-btn {
+    padding: clamp(13px, .95vw, 19px) clamp(18px, 1.35vw, 28px) !important;
+    font-size: clamp(11px, .72vw, 14px) !important;
+  }
+
+  .text-btn {
+    font-size: clamp(10px, .67vw, 13px) !important;
+  }
+
+  .news-rail article {
+    padding: clamp(12px, .95vw, 19px) 0 !important;
+  }
+
+  .news-rail time,
+  .mini-link {
+    font-size: clamp(9px, .58vw, 12px) !important;
+  }
+
+  .news-rail b {
+    font-size: clamp(12px, .78vw, 15px) !important;
+  }
+
+  .news-rail p {
+    font-size: clamp(12px, .82vw, 16px) !important;
+    line-height: 1.55 !important;
+  }
+}
+
+/* At 1080p/1440p and ultrawide sizes, keep the same proportions while
+   letting the columns adapt instead of leaving a large empty center. */
+@media (min-width: 801px) and (max-width: 1250px) {
+  .site-nav {
+    padding-inline: 18px !important;
+  }
+
+  .site-nav .brand {
+    min-width: 190px !important;
+  }
+
+  .site-nav nav {
+    gap: 8px !important;
+  }
+
+  .site-nav nav a {
+    padding: 10px 9px !important;
+    font-size: 9px !important;
+  }
+
+  .nav-rules {
+    padding-inline: 13px !important;
+    font-size: 11px !important;
+  }
+
+  .hero-inner {
+    width: 94vw !important;
+    grid-template-columns: minmax(205px, 24vw) minmax(260px, 1fr) minmax(220px, 27vw) !important;
+    gap: clamp(14px, 2vw, 25px) !important;
+  }
+
+  .hero-logo {
+    width: clamp(230px, 22vw, 285px) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .site-nav {
+    height: 68px !important;
+    padding-inline: 14px !important;
+  }
+
+  .nav-rules {
+    min-height: 42px !important;
+    padding: 10px 13px !important;
+    font-size: 11px !important;
+  }
+
+  .hero {
+    padding-top: 100px !important;
+    background-size: auto 115% !important;
+  }
+
+  .hero-logo {
+    width: min(390px, 82vw) !important;
+  }
+
+  .hero-title p {
+    font-size: clamp(14px, 3.7vw, 17px) !important;
+  }
+}
