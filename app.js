@@ -604,7 +604,13 @@ setLoreYear(savedLoreYear, false);
         </button>`).join("");
 
       $$(".lore-card[data-city]", mapLoreGrid).forEach(card => {
-        card.addEventListener("click", () => renderCityLore(card.dataset.city));
+        card.addEventListener('mouseenter', () => frontierPins.forEach(pin => pin.classList.toggle('is-linked', Number(pin.dataset.city) === Number(card.dataset.city))));
+        card.addEventListener('mouseleave', () => frontierPins.forEach(pin => pin.classList.remove('is-linked')));
+        card.addEventListener("click", () => {
+          const cityIndex = Number(card.dataset.city);
+          frontierPins.forEach(pin => pin.classList.toggle('is-linked', Number(pin.dataset.city) === cityIndex));
+          renderCityLore(cityIndex);
+        });
       });
     }
 
@@ -613,6 +619,17 @@ setLoreYear(savedLoreYear, false);
       try { observer?.observe(el); } catch(e) {}
     });
   }
+
+  // RDR2 map pins open the matching city dossier.
+  frontierPins.forEach(pin => {
+    pin.addEventListener('click', () => {
+      const cityIndex = Number(pin.dataset.city);
+      if (!Number.isInteger(cityIndex) || !cityLoreArchive[cityIndex]) return;
+      frontierPins.forEach(other => other.classList.toggle('is-linked', other === pin));
+      $$('.lore-card[data-city]', mapLoreGrid).forEach(card => card.classList.toggle('is-linked', Number(card.dataset.city) === cityIndex));
+      renderCityLore(cityIndex);
+    });
+  });
 
   mapTools.forEach(btn => btn.addEventListener('click', () => setMapView(btn.dataset.mapView)));
   setMapView('guarma');
@@ -625,11 +642,12 @@ setLoreYear(savedLoreYear, false);
       'WRZEŚNIA':'IX','PAŹDZIERNIKA':'X','LISTOPADA':'XI','GRUDNIA':'XII'
     };
     journalIndexEntries.innerHTML = guarmaJournalReader.map((entry, i) => {
-      const parts = entry.date.toUpperCase().split(' ');
-      const day = parts[0] || '';
+      const parts = String(entry.date || '').trim().toUpperCase().split(/\s+/);
+      const day = (parts[0] || '').replace(/\D/g, '');
       const month = monthMap[parts[1]] || '';
       const year = parts[2] || '';
-      return `<button data-journal-entry="${i}">${year} · ${day.padStart(2,'0')} ${month}</button>`;
+      const label = day && month && /^\d{4}$/.test(year) ? `${year} · ${day.padStart(2,'0')} ${month}` : `WPIS · ${String(i+1).padStart(2,'0')}`;
+      return `<button type="button" data-journal-entry="${i}" aria-label="Otwórz wpis ${entry.title || i+1}">${label}</button>`;
     }).join('');
   }
 

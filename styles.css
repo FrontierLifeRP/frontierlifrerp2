@@ -144,6 +144,25 @@ a {
 }
 
 .site-nav nav a,
+
+.nav-rules {
+  appearance: none;
+  border: 1px solid rgba(198,155,93,.58);
+  background: rgba(24,16,10,.72);
+  color: #d9bc87;
+  padding: 10px 13px;
+  white-space: nowrap;
+  cursor: pointer;
+  font: 700 10px var(--display);
+  letter-spacing: 1.2px;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.nav-rules:hover, .nav-rules:focus-visible {
+  background: #382416;
+  border-color: #d0a76a;
+  color: #f0d6a1;
+}
+
 .nav-cta {
   font: 10px var(--display);
   letter-spacing: 1.4px;
@@ -168,7 +187,7 @@ a {
 .hero {
   min-height: 930px;
   position: relative;
-  background: url("start.jpg") center 28%/cover no-repeat;
+  background: url("start.jpg") center 28%/130% auto no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 120px 5vw 70px;
@@ -1986,20 +2005,20 @@ footer a:hover {
 
 .rule-copy {
   font-family: "Roboto Slab", Georgia, serif !important;
-  font-size: 11.5px !important;
-  line-height: 1.65 !important;
+  font-size: 14px !important;
+  line-height: 1.72 !important;
   color: #4d3926 !important;
 }
 
 .rule-copy p {
   display: block !important;
-  margin: 0 0 9px !important;
+  margin: 0 0 11px !important;
   padding: 0 !important;
   white-space: normal !important;
 }
 
 .rule-copy .rule-item {
-  margin-bottom: 8px !important;
+  margin-bottom: 10px !important;
 }
 
 .rule-copy .rule-number {
@@ -5965,4 +5984,10 @@ a:hover .inline-cta{
 
 @media(max-width:900px){
   #mapLoreGrid.guarma-lore-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width: 760px) {
+  .hero { background-size: auto 130%; background-position: center 28%; }
+  .nav-rules { padding: 8px 9px; font-size: 9px; }
+  .rule-copy { font-size: 12.5px !important; }
 }
