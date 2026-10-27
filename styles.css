@@ -5991,3 +5991,76 @@ a:hover .inline-cta{
   .nav-rules { padding: 8px 9px; font-size: 9px; }
   .rule-copy { font-size: 12.5px !important; }
 }
+
+
+/* V27 — wyraźny przycisk regulaminu w górnej nawigacji */
+.site-nav .nav-rules {
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: 18px;
+  padding: 13px 20px;
+  min-height: 44px;
+  border: 1px solid #d2ad70;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #8a5b2e 0%, #59351d 100%);
+  color: #fff0c9;
+  box-shadow: 0 0 0 1px rgba(20, 11, 5, .8), inset 0 1px 0 rgba(255, 229, 177, .25), 0 3px 12px rgba(0, 0, 0, .3);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .7);
+}
+.site-nav .nav-rules::before {
+  content: "§";
+  margin-right: 9px;
+  color: #f1cf8e;
+  font-size: 15px;
+}
+.site-nav .nav-rules:hover,
+.site-nav .nav-rules:focus-visible {
+  background: linear-gradient(180deg, #a06e3b 0%, #704323 100%);
+  border-color: #f0d49a;
+  color: #fff8e7;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(20, 11, 5, .8), 0 0 16px rgba(210, 166, 96, .24);
+}
+
+/* Regulamin: FrontierLife / Roleplay / Sezon II */
+.book-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0;
+}
+.book-brand .brand-name {
+  margin: 0 !important;
+  font-size: 23px !important;
+  letter-spacing: 1px !important;
+  line-height: 1.05 !important;
+  text-transform: none;
+}
+.book-brand .brand-roleplay {
+  margin: 3px 0 0 1px !important;
+  font-size: 11px !important;
+  font-style: normal !important;
+  letter-spacing: 2.1px !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+}
+.book-brand .brand-season {
+  margin: 5px 0 0 1px !important;
+  font-size: 8px !important;
+  letter-spacing: 2.8px !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+@media (max-width: 760px) {
+  .site-nav .nav-rules {
+    margin-left: auto;
+    padding: 11px 13px;
+    min-height: 40px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+}
